@@ -1,0 +1,47 @@
+load("@rules_conda//conda/environment:defs.bzl", "run_binary")
+
+run_binary(
+    name = "1.14",
+    environment = "@automake_1.14",
+    path = select({
+        "@platforms//os:windows": "Library/bin/automake",
+        "//conditions:default": "bin/automake",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "1.15",
+    environment = "@automake_1.15",
+    path = select({
+        "@platforms//os:windows": "Library/bin/automake",
+        "//conditions:default": "bin/automake",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "1.16",
+    environment = "@automake_1.16",
+    path = select({
+        "@platforms//os:windows": "Library/bin/automake",
+        "//conditions:default": "bin/automake",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "1.17",
+    environment = "@automake_1.17",
+    path = select({
+        "@platforms//os:windows": "Library/bin/automake",
+        "//conditions:default": "bin/automake",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "automake",
+    actual = ":1.17",
+    visibility = ["//visibility:public"],
+)

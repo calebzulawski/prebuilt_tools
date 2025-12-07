@@ -2,8 +2,8 @@ load("@rules_python//python:defs.bzl", "py_binary")
 load("@prebuilt_tools_pip//:requirements.bzl", "requirement")
 
 py_binary(
-    name = "create_conda_envs",
-    srcs = ["create_conda_envs.py"],
+    name = "generate",
+    srcs = ["generate.py"],
     data = ["config.json"],
     deps = [
         requirement("py-rattler"),

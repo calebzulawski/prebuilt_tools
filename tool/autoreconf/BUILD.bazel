@@ -1,0 +1,37 @@
+load("@rules_conda//conda/environment:defs.bzl", "run_binary")
+
+run_binary(
+    name = "2.69",
+    environment = "@autoconf_2.69",
+    path = select({
+        "@platforms//os:windows": "Library/bin/autoreconf",
+        "//conditions:default": "bin/autoreconf",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "2.71",
+    environment = "@autoconf_2.71",
+    path = select({
+        "@platforms//os:windows": "Library/bin/autoreconf",
+        "//conditions:default": "bin/autoreconf",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "2.72",
+    environment = "@autoconf_2.72",
+    path = select({
+        "@platforms//os:windows": "Library/bin/autoreconf",
+        "//conditions:default": "bin/autoreconf",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "autoreconf",
+    actual = ":2.72",
+    visibility = ["//visibility:public"],
+)

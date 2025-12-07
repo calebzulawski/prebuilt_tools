@@ -1,0 +1,17 @@
+load("@rules_conda//conda/environment:defs.bzl", "run_binary")
+
+run_binary(
+    name = "1.4",
+    environment = "@m4_1.4",
+    path = select({
+        "@platforms//os:windows": "Library/bin/m4",
+        "//conditions:default": "bin/m4",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "m4",
+    actual = ":1.4",
+    visibility = ["//visibility:public"],
+)

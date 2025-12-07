@@ -1,0 +1,87 @@
+load("@rules_conda//conda/environment:defs.bzl", "run_binary")
+
+run_binary(
+    name = "1.6",
+    environment = "@ninja_1.6",
+    path = select({
+        "@platforms//os:windows": "Library/bin/ninja",
+        "//conditions:default": "bin/ninja",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "1.7",
+    environment = "@ninja_1.7",
+    path = select({
+        "@platforms//os:windows": "Library/bin/ninja",
+        "//conditions:default": "bin/ninja",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "1.8",
+    environment = "@ninja_1.8",
+    path = select({
+        "@platforms//os:windows": "Library/bin/ninja",
+        "//conditions:default": "bin/ninja",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "1.9",
+    environment = "@ninja_1.9",
+    path = select({
+        "@platforms//os:windows": "Library/bin/ninja",
+        "//conditions:default": "bin/ninja",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "1.10",
+    environment = "@ninja_1.10",
+    path = select({
+        "@platforms//os:windows": "Library/bin/ninja",
+        "//conditions:default": "bin/ninja",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "1.11",
+    environment = "@ninja_1.11",
+    path = select({
+        "@platforms//os:windows": "Library/bin/ninja",
+        "//conditions:default": "bin/ninja",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "1.12",
+    environment = "@ninja_1.12",
+    path = select({
+        "@platforms//os:windows": "Library/bin/ninja",
+        "//conditions:default": "bin/ninja",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "1.13",
+    environment = "@ninja_1.13",
+    path = select({
+        "@platforms//os:windows": "Library/bin/ninja",
+        "//conditions:default": "bin/ninja",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "ninja",
+    actual = ":1.13",
+    visibility = ["//visibility:public"],
+)
