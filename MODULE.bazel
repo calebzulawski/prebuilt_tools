@@ -19,3 +19,5 @@ pip.parse(
 )
 
 use_repo(pip, "prebuilt_tools_pip")
+
+include("//:generated.MODULE.bazel")
