@@ -1,0 +1,7 @@
+name: m4_1.4
+channels:
+  - conda-forge
+dependencies:
+  - m2-m4>=1.4,<1.5
+platforms:
+  - win-64

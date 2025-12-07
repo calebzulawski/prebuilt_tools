@@ -1,0 +1,11 @@
+name: cmake_3.17
+channels:
+  - conda-forge
+dependencies:
+  - cmake>=3.17,<3.18
+platforms:
+  - linux-64
+  - linux-aarch64
+  - linux-ppc64le
+  - osx-64
+  - win-64

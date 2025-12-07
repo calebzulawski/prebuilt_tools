@@ -1,0 +1,11 @@
+name: autoconf_2.69
+channels:
+  - conda-forge
+dependencies:
+  - autoconf>=2.69,<2.70
+platforms:
+  - linux-64
+  - linux-aarch64
+  - linux-ppc64le
+  - osx-64
+  - osx-arm64

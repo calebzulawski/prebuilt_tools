@@ -1,0 +1,9 @@
+name: meson_0.46
+channels:
+  - conda-forge
+dependencies:
+  - meson>=0.46,<0.47
+platforms:
+  - linux-64
+  - osx-64
+  - win-64

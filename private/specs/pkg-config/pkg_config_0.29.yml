@@ -1,0 +1,12 @@
+name: pkg_config_0.29
+channels:
+  - conda-forge
+dependencies:
+  - pkg-config>=0.29,<0.30
+platforms:
+  - linux-64
+  - linux-aarch64
+  - linux-ppc64le
+  - osx-64
+  - osx-arm64
+  - win-64

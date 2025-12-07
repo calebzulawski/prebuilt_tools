@@ -1,0 +1,12 @@
+name: cmake_3.30
+channels:
+  - conda-forge
+dependencies:
+  - cmake>=3.30,<3.31
+platforms:
+  - linux-64
+  - linux-aarch64
+  - linux-ppc64le
+  - osx-64
+  - osx-arm64
+  - win-64

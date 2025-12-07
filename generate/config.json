@@ -1,0 +1,37 @@
+[
+  {
+    "package": "make",
+    "executables": ["make"]
+  },
+  {
+    "package": "cmake",
+    "executables": ["cmake"],
+    "min_minor_version": "3.14"
+  },
+  {
+    "package": "ninja",
+    "executables": ["ninja"]
+  },
+  {
+    "package": "meson",
+    "executables": ["meson"]
+  },
+  {
+    "package": "pkg-config",
+    "executables": ["pkg-config"]
+  },
+  {
+    "package": "m4",
+    "executables": ["m4"],
+    "win_package": "m2-m4"
+  },
+  {
+    "package": "autoconf",
+    "executables": ["autoconf", "autoreconf"],
+    "win_package": "m2-autoconf"
+  },
+  {
+    "package": "automake",
+    "executables": ["automake"]
+  }
+]

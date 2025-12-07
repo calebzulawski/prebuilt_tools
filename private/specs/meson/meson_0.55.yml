@@ -1,0 +1,12 @@
+name: meson_0.55
+channels:
+  - conda-forge
+dependencies:
+  - meson>=0.55,<0.56
+platforms:
+  - linux-64
+  - linux-aarch64
+  - linux-ppc64le
+  - osx-64
+  - osx-arm64
+  - win-64

@@ -1,0 +1,12 @@
+name: ninja_1.11
+channels:
+  - conda-forge
+dependencies:
+  - ninja>=1.11,<1.12
+platforms:
+  - linux-64
+  - linux-aarch64
+  - linux-ppc64le
+  - osx-64
+  - osx-arm64
+  - win-64

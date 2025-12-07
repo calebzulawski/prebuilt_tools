@@ -1,0 +1,11 @@
+name: automake_1.16
+channels:
+  - conda-forge
+dependencies:
+  - automake>=1.16,<1.17
+platforms:
+  - linux-64
+  - linux-aarch64
+  - linux-ppc64le
+  - osx-64
+  - osx-arm64

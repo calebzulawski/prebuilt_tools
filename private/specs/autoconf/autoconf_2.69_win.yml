@@ -1,0 +1,7 @@
+name: autoconf_2.69
+channels:
+  - conda-forge
+dependencies:
+  - m2-autoconf>=2.69,<2.70
+platforms:
+  - win-64
