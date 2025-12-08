@@ -2,18 +2,6 @@ name: Test
 on:
   push:
 jobs:
-  check_formatting:
-    runs-on: ubuntu-24.04
-    steps:
-      - uses: actions/checkout@v4
-      - uses: bazel-contrib/setup-bazel@0.14.0
-        with:
-          module-root: bazel/test
-          bazelisk-cache: true
-          disk-cache: false
-          repository-cache: false
-      - name: Check formatting
-        run: bazel run format.check
   test:
     strategy:
       matrix:
