@@ -10,6 +10,7 @@ run_binary(
     visibility = ["//visibility:public"],
 )
 
+
 run_binary(
     name = "2.26",
     environment = "@binutils_2.26",
@@ -19,6 +20,7 @@ run_binary(
     }),
     visibility = ["//visibility:public"],
 )
+
 
 run_binary(
     name = "2.27",
@@ -30,6 +32,7 @@ run_binary(
     visibility = ["//visibility:public"],
 )
 
+
 run_binary(
     name = "2.28",
     environment = "@binutils_2.28",
@@ -39,6 +42,7 @@ run_binary(
     }),
     visibility = ["//visibility:public"],
 )
+
 
 run_binary(
     name = "2.30",
@@ -50,6 +54,7 @@ run_binary(
     visibility = ["//visibility:public"],
 )
 
+
 run_binary(
     name = "2.31",
     environment = "@binutils_2.31",
@@ -59,6 +64,7 @@ run_binary(
     }),
     visibility = ["//visibility:public"],
 )
+
 
 run_binary(
     name = "2.32",
@@ -70,6 +76,7 @@ run_binary(
     visibility = ["//visibility:public"],
 )
 
+
 run_binary(
     name = "2.33",
     environment = "@binutils_2.33",
@@ -79,6 +86,7 @@ run_binary(
     }),
     visibility = ["//visibility:public"],
 )
+
 
 run_binary(
     name = "2.34",
@@ -90,6 +98,7 @@ run_binary(
     visibility = ["//visibility:public"],
 )
 
+
 run_binary(
     name = "2.35",
     environment = "@binutils_2.35",
@@ -99,6 +108,7 @@ run_binary(
     }),
     visibility = ["//visibility:public"],
 )
+
 
 run_binary(
     name = "2.36",
@@ -110,6 +120,7 @@ run_binary(
     visibility = ["//visibility:public"],
 )
 
+
 run_binary(
     name = "2.39",
     environment = "@binutils_2.39",
@@ -119,6 +130,7 @@ run_binary(
     }),
     visibility = ["//visibility:public"],
 )
+
 
 run_binary(
     name = "2.40",
@@ -130,6 +142,7 @@ run_binary(
     visibility = ["//visibility:public"],
 )
 
+
 run_binary(
     name = "2.42",
     environment = "@binutils_2.42",
@@ -139,6 +152,7 @@ run_binary(
     }),
     visibility = ["//visibility:public"],
 )
+
 
 run_binary(
     name = "2.43",
@@ -150,6 +164,7 @@ run_binary(
     visibility = ["//visibility:public"],
 )
 
+
 run_binary(
     name = "2.44",
     environment = "@binutils_2.44",
@@ -160,6 +175,7 @@ run_binary(
     visibility = ["//visibility:public"],
 )
 
+
 run_binary(
     name = "2.45",
     environment = "@binutils_2.45",
@@ -169,6 +185,7 @@ run_binary(
     }),
     visibility = ["//visibility:public"],
 )
+
 
 alias(
     name = "readelf",

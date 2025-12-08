@@ -10,6 +10,7 @@ run_binary(
     visibility = ["//visibility:public"],
 )
 
+
 run_binary(
     name = "2.71",
     environment = "@autoconf_2.71",
@@ -20,6 +21,7 @@ run_binary(
     visibility = ["//visibility:public"],
 )
 
+
 run_binary(
     name = "2.72",
     environment = "@autoconf_2.72",
@@ -29,6 +31,7 @@ run_binary(
     }),
     visibility = ["//visibility:public"],
 )
+
 
 alias(
     name = "autoconf",

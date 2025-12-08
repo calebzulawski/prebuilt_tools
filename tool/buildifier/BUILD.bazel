@@ -10,6 +10,7 @@ run_binary(
     visibility = ["//visibility:public"],
 )
 
+
 run_binary(
     name = "4.0",
     environment = "@buildifier_4.0",
@@ -19,6 +20,7 @@ run_binary(
     }),
     visibility = ["//visibility:public"],
 )
+
 
 run_binary(
     name = "4.2",
@@ -30,6 +32,7 @@ run_binary(
     visibility = ["//visibility:public"],
 )
 
+
 run_binary(
     name = "5.0",
     environment = "@buildifier_5.0",
@@ -39,6 +42,7 @@ run_binary(
     }),
     visibility = ["//visibility:public"],
 )
+
 
 run_binary(
     name = "5.1",
@@ -50,6 +54,7 @@ run_binary(
     visibility = ["//visibility:public"],
 )
 
+
 run_binary(
     name = "6.0",
     environment = "@buildifier_6.0",
@@ -59,6 +64,7 @@ run_binary(
     }),
     visibility = ["//visibility:public"],
 )
+
 
 run_binary(
     name = "6.1",
@@ -70,6 +76,7 @@ run_binary(
     visibility = ["//visibility:public"],
 )
 
+
 run_binary(
     name = "6.3",
     environment = "@buildifier_6.3",
@@ -79,6 +86,7 @@ run_binary(
     }),
     visibility = ["//visibility:public"],
 )
+
 
 run_binary(
     name = "6.4",
@@ -90,6 +98,7 @@ run_binary(
     visibility = ["//visibility:public"],
 )
 
+
 run_binary(
     name = "7.1",
     environment = "@buildifier_7.1",
@@ -99,6 +108,7 @@ run_binary(
     }),
     visibility = ["//visibility:public"],
 )
+
 
 run_binary(
     name = "7.3",
@@ -110,6 +120,7 @@ run_binary(
     visibility = ["//visibility:public"],
 )
 
+
 run_binary(
     name = "8.0",
     environment = "@buildifier_8.0",
@@ -120,6 +131,7 @@ run_binary(
     visibility = ["//visibility:public"],
 )
 
+
 run_binary(
     name = "8.2",
     environment = "@buildifier_8.2",
@@ -129,6 +141,7 @@ run_binary(
     }),
     visibility = ["//visibility:public"],
 )
+
 
 alias(
     name = "buildifier",

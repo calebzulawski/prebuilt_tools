@@ -1,0 +1,428 @@
+version: 6
+environments:
+  buildifier_3.5:
+    channels:
+    - url: https://conda.anaconda.org/conda-forge
+    packages:
+      linux-64:
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/buildifier-3.5.0-ha8f183a_0.tar.bz2
+      osx-64:
+      - conda: https://conda.anaconda.org/conda-forge/osx-64/buildifier-3.5.0-h990441c_0.tar.bz2
+      win-64:
+      - conda: https://conda.anaconda.org/conda-forge/win-64/buildifier-3.5.0-hd02998f_0.tar.bz2
+  buildifier_4.0:
+    channels:
+    - url: https://conda.anaconda.org/conda-forge
+    packages:
+      linux-64:
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/buildifier-4.0.1-ha8f183a_0.tar.bz2
+      osx-64:
+      - conda: https://conda.anaconda.org/conda-forge/osx-64/buildifier-4.0.1-h990441c_0.tar.bz2
+      win-64:
+      - conda: https://conda.anaconda.org/conda-forge/win-64/buildifier-4.0.1-hd02998f_0.tar.bz2
+  buildifier_4.2:
+    channels:
+    - url: https://conda.anaconda.org/conda-forge
+    packages:
+      linux-64:
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/buildifier-4.2.5-ha8f183a_0.tar.bz2
+      osx-64:
+      - conda: https://conda.anaconda.org/conda-forge/osx-64/buildifier-4.2.5-h990441c_0.tar.bz2
+      win-64:
+      - conda: https://conda.anaconda.org/conda-forge/win-64/buildifier-4.2.5-hd02998f_0.tar.bz2
+  buildifier_5.0:
+    channels:
+    - url: https://conda.anaconda.org/conda-forge
+    packages:
+      linux-64:
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/buildifier-5.0.1-ha8f183a_0.tar.bz2
+      osx-64:
+      - conda: https://conda.anaconda.org/conda-forge/osx-64/buildifier-5.0.1-h990441c_0.tar.bz2
+      win-64:
+      - conda: https://conda.anaconda.org/conda-forge/win-64/buildifier-5.0.1-hd02998f_0.tar.bz2
+  buildifier_5.1:
+    channels:
+    - url: https://conda.anaconda.org/conda-forge
+    packages:
+      linux-64:
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/buildifier-5.1.0-ha8f183a_0.tar.bz2
+      osx-64:
+      - conda: https://conda.anaconda.org/conda-forge/osx-64/buildifier-5.1.0-h990441c_0.tar.bz2
+      win-64:
+      - conda: https://conda.anaconda.org/conda-forge/win-64/buildifier-5.1.0-hd02998f_0.tar.bz2
+  buildifier_6.0:
+    channels:
+    - url: https://conda.anaconda.org/conda-forge
+    packages:
+      linux-64:
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/buildifier-6.0.1-ha8f183a_0.conda
+      osx-64:
+      - conda: https://conda.anaconda.org/conda-forge/osx-64/buildifier-6.0.1-h990441c_0.conda
+      win-64:
+      - conda: https://conda.anaconda.org/conda-forge/win-64/buildifier-6.0.1-hd02998f_0.conda
+  buildifier_6.1:
+    channels:
+    - url: https://conda.anaconda.org/conda-forge
+    packages:
+      linux-64:
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/buildifier-6.1.2-ha8f183a_0.conda
+      osx-64:
+      - conda: https://conda.anaconda.org/conda-forge/osx-64/buildifier-6.1.2-h990441c_0.conda
+      win-64:
+      - conda: https://conda.anaconda.org/conda-forge/win-64/buildifier-6.1.2-hd02998f_0.conda
+  buildifier_6.3:
+    channels:
+    - url: https://conda.anaconda.org/conda-forge
+    packages:
+      linux-64:
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/buildifier-6.3.3-ha8f183a_0.conda
+      osx-64:
+      - conda: https://conda.anaconda.org/conda-forge/osx-64/buildifier-6.3.3-h990441c_0.conda
+      win-64:
+      - conda: https://conda.anaconda.org/conda-forge/win-64/buildifier-6.3.3-hd02998f_0.conda
+  buildifier_6.4:
+    channels:
+    - url: https://conda.anaconda.org/conda-forge
+    packages:
+      linux-64:
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/buildifier-6.4.0-ha8f183a_0.conda
+      osx-64:
+      - conda: https://conda.anaconda.org/conda-forge/osx-64/buildifier-6.4.0-h990441c_0.conda
+      win-64:
+      - conda: https://conda.anaconda.org/conda-forge/win-64/buildifier-6.4.0-hd02998f_0.conda
+  buildifier_7.1:
+    channels:
+    - url: https://conda.anaconda.org/conda-forge
+    packages:
+      linux-64:
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/buildifier-7.1.2-ha8f183a_0.conda
+      osx-64:
+      - conda: https://conda.anaconda.org/conda-forge/osx-64/buildifier-7.1.2-h990441c_0.conda
+      win-64:
+      - conda: https://conda.anaconda.org/conda-forge/win-64/buildifier-7.1.2-hd02998f_0.conda
+  buildifier_7.3:
+    channels:
+    - url: https://conda.anaconda.org/conda-forge
+    packages:
+      linux-64:
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/buildifier-7.3.1-ha8f183a_0.conda
+      osx-64:
+      - conda: https://conda.anaconda.org/conda-forge/osx-64/buildifier-7.3.1-h990441c_0.conda
+      win-64:
+      - conda: https://conda.anaconda.org/conda-forge/win-64/buildifier-7.3.1-hd02998f_0.conda
+  buildifier_8.0:
+    channels:
+    - url: https://conda.anaconda.org/conda-forge
+    packages:
+      linux-64:
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/buildifier-8.0.3-ha8f183a_0.conda
+      osx-64:
+      - conda: https://conda.anaconda.org/conda-forge/osx-64/buildifier-8.0.3-h990441c_0.conda
+      win-64:
+      - conda: https://conda.anaconda.org/conda-forge/win-64/buildifier-8.0.2-hd02998f_0.conda
+  buildifier_8.2:
+    channels:
+    - url: https://conda.anaconda.org/conda-forge
+    packages:
+      linux-64:
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/buildifier-8.2.1-ha8f183a_0.conda
+      osx-64:
+      - conda: https://conda.anaconda.org/conda-forge/osx-64/buildifier-8.2.1-h990441c_0.conda
+      win-64:
+      - conda: https://conda.anaconda.org/conda-forge/win-64/buildifier-8.2.1-hd02998f_0.conda
+packages:
+- conda: https://conda.anaconda.org/conda-forge/linux-64/buildifier-3.5.0-ha8f183a_0.tar.bz2
+  sha256: 9ef361a9c929bcb320769e7c6b390a6cba1fc36265f14d4004b379a7736d7558
+  md5: 39be883d03a6e205f63f547f49193f68
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3639407
+  timestamp: 1608849814824
+- conda: https://conda.anaconda.org/conda-forge/linux-64/buildifier-4.0.1-ha8f183a_0.tar.bz2
+  sha256: 1fa530709633568ad3da140a55a5bf7fe2e3ab40eb00533bda92582b921d6a43
+  md5: b72f8a8204bcf03ad97645cc9d324272
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3518872
+  timestamp: 1614611115188
+- conda: https://conda.anaconda.org/conda-forge/linux-64/buildifier-4.2.5-ha8f183a_0.tar.bz2
+  sha256: 797f4b269d46712644504b4d8c10c31f5fc1204055f748d15141dd5638bb2228
+  md5: 0c0fb1c795e3617656c7e431015f4cc8
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3413090
+  timestamp: 1642088040435
+- conda: https://conda.anaconda.org/conda-forge/linux-64/buildifier-5.0.1-ha8f183a_0.tar.bz2
+  sha256: 8a0ef91e504a65dcd20a1aa6654f00d979aeeb1777e9fccc69b91459ac10797a
+  md5: e59f41b5d4e0a40f6fe0eb240c65627e
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3423604
+  timestamp: 1644587983736
+- conda: https://conda.anaconda.org/conda-forge/linux-64/buildifier-5.1.0-ha8f183a_0.tar.bz2
+  sha256: 41c5d1976906e06e225dcb5a5521cd96ebb46331da2dbb5be193952cd417d524
+  md5: 76e7c529ce053940c002c709a1350706
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3433468
+  timestamp: 1649960357652
+- conda: https://conda.anaconda.org/conda-forge/linux-64/buildifier-6.0.1-ha8f183a_0.conda
+  sha256: ef1bfba3aa900aaa658460042a05ead077da385d042a9427d4ec5f643a4b2920
+  md5: 179c363aca983a4a2b80f8716e917b67
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3342348
+  timestamp: 1675229375809
+- conda: https://conda.anaconda.org/conda-forge/linux-64/buildifier-6.1.2-ha8f183a_0.conda
+  sha256: dd6c224b44711a31504509bd1f3003ba33f7b1d36bfb32a3973449fa09b5eb5a
+  md5: 8f5886334fcd67813deed9697b96f0b8
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3359687
+  timestamp: 1682646881219
+- conda: https://conda.anaconda.org/conda-forge/linux-64/buildifier-6.3.3-ha8f183a_0.conda
+  sha256: daa0a3c49fa882ace3639f485906700737c692d6413fdea3faa53cc48489228a
+  md5: 20fd14da42b2dc6d35618c5a45562686
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3543967
+  timestamp: 1692979546341
+- conda: https://conda.anaconda.org/conda-forge/linux-64/buildifier-6.4.0-ha8f183a_0.conda
+  sha256: dd23bbe57bebcf581aa2649342df0252ac48083d16f905698237a8005db467a9
+  md5: 01735c4535abffebcc51a715dca51a8a
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3529095
+  timestamp: 1700215123888
+- conda: https://conda.anaconda.org/conda-forge/linux-64/buildifier-7.1.2-ha8f183a_0.conda
+  sha256: 534c7538c6c891f70ad8596eba8c18ba5acbe48117bd3a6360053fb6e4110650
+  md5: 166a0cfa7bfb2815ab4a4fc4b3422059
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3607091
+  timestamp: 1716494926694
+- conda: https://conda.anaconda.org/conda-forge/linux-64/buildifier-7.3.1-ha8f183a_0.conda
+  sha256: 32a7169b87dc2c98a09e0e26ecd120554e6c76a42453396667836ffa7900f937
+  md5: 9f7859974d6a274af4f62f2b0fd5e088
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3515883
+  timestamp: 1724791732932
+- conda: https://conda.anaconda.org/conda-forge/linux-64/buildifier-8.0.3-ha8f183a_0.conda
+  sha256: 3cd10d21f71ef66107e7c875eb2716ac0d194ea31c1627482cc3b0e2dae071c3
+  md5: 7ecaf09a30acdf64cc110e5f16b149b8
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3543355
+  timestamp: 1738788919091
+- conda: https://conda.anaconda.org/conda-forge/linux-64/buildifier-8.2.1-ha8f183a_0.conda
+  sha256: 2b66dfe9ab9db6da52a9b0ba384618964e76280b9843c5f739fde8a31dfb4272
+  md5: 088438b7b385de93bacda19aa2cd2a5d
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3702955
+  timestamp: 1749590717269
+- conda: https://conda.anaconda.org/conda-forge/osx-64/buildifier-3.5.0-h990441c_0.tar.bz2
+  sha256: 8ae43fa5ae7195094aeeaaa546005c36546e4c07a888c4c4d8e1ac42b2cefedb
+  md5: 4d5f60afc746727d977bb1f840f90662
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3583330
+  timestamp: 1608849862429
+- conda: https://conda.anaconda.org/conda-forge/osx-64/buildifier-4.0.1-h990441c_0.tar.bz2
+  sha256: 1f05de249cd7090b6791a5193e70eda8a85112529cc083992235d92a31198ba6
+  md5: 67b3fcb41efbe867e4e964f6b74b5330
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3465416
+  timestamp: 1614611345421
+- conda: https://conda.anaconda.org/conda-forge/osx-64/buildifier-4.2.5-h990441c_0.tar.bz2
+  sha256: 9cededfe18d556c9806c213f264d22fcd5c28058f1fe0ea1990879e76ac42820
+  md5: d974e6fe1fc5c42c897aa12a7435279b
+  constrains:
+  - __osx>=10.12
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3369120
+  timestamp: 1642088349775
+- conda: https://conda.anaconda.org/conda-forge/osx-64/buildifier-5.0.1-h990441c_0.tar.bz2
+  sha256: 78fca44b964cf71493ef2c519869ea23e0c7c6f16b2b9a95fc69a3b63791749b
+  md5: 04460d27cd66f3f91fd4af673e478b29
+  constrains:
+  - __osx>=10.12
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3381005
+  timestamp: 1644588265087
+- conda: https://conda.anaconda.org/conda-forge/osx-64/buildifier-5.1.0-h990441c_0.tar.bz2
+  sha256: 4187eebc16531f7c728694031528939cbbc8ac46b01cdda02b5d7f1964d7d6cd
+  md5: 4633b9f2664ae5ce4c81ab494b2ae2b7
+  constrains:
+  - __osx>=10.12
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3382815
+  timestamp: 1649960711683
+- conda: https://conda.anaconda.org/conda-forge/osx-64/buildifier-6.0.1-h990441c_0.conda
+  sha256: f79570cbd01454942bc48080ff33656451c9e3f2fdd5940e9033f53448fb9f85
+  md5: 492b3091773b4db1bd60031462e560d6
+  constrains:
+  - __osx>=10.12
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3301946
+  timestamp: 1675229640122
+- conda: https://conda.anaconda.org/conda-forge/osx-64/buildifier-6.1.2-h990441c_0.conda
+  sha256: f7188ce10447910352e030f1effcba1b98e0bbb317a940e7b2d9549120773a52
+  md5: 8ff30f40737d738444286ba361116673
+  constrains:
+  - __osx>=10.12
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3320423
+  timestamp: 1682647210891
+- conda: https://conda.anaconda.org/conda-forge/osx-64/buildifier-6.3.3-h990441c_0.conda
+  sha256: caa12e1e212f431257fd674cfad2cbacfad519d0ede48e391df485478b8aab59
+  md5: 5a7866ffa31a7bbfab1b5eda0d3b5294
+  constrains:
+  - __osx>=10.12
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3501344
+  timestamp: 1692979864583
+- conda: https://conda.anaconda.org/conda-forge/osx-64/buildifier-6.4.0-h990441c_0.conda
+  sha256: 6fb4946bfae7cad12d73eeabfa99323f74a187f8e9ab403419c02853fb3b2219
+  md5: 203f96fa9d8f852682824cbac99e9c76
+  constrains:
+  - __osx>=10.12
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3483316
+  timestamp: 1700215449391
+- conda: https://conda.anaconda.org/conda-forge/osx-64/buildifier-7.1.2-h990441c_0.conda
+  sha256: 95e2de9cf3fb501bc5b75133fc37c3842fd8461f0a90092b48cc1f068f345ee9
+  md5: d84c258487f84e1db393382a40b88a68
+  constrains:
+  - __osx>=10.12
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3600313
+  timestamp: 1716495055474
+- conda: https://conda.anaconda.org/conda-forge/osx-64/buildifier-7.3.1-h990441c_0.conda
+  sha256: 08ae261f4f7fb6faefd31b32e4e49f25909b0414f5cdf3bfa34f1bffc05319f2
+  md5: 1c67384d7a662bb4e024a121ab162e2e
+  constrains:
+  - __osx>=10.12
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3491929
+  timestamp: 1724791865809
+- conda: https://conda.anaconda.org/conda-forge/osx-64/buildifier-8.0.3-h990441c_0.conda
+  sha256: 4cad06b78e1d76f054c0d9b58c2e96ba9fb56e9b73babb1762fb4c5f741d7408
+  md5: 87d66bd9c8eb3b5f7f13dd644e7038cc
+  constrains:
+  - __osx>=10.12
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3499459
+  timestamp: 1738789216938
+- conda: https://conda.anaconda.org/conda-forge/osx-64/buildifier-8.2.1-h990441c_0.conda
+  sha256: 480a2d851075ed9cba05d3b7b1c4cecae4aa41f39dcfc4ba8987bb30ed026ee3
+  md5: c661b6b42098405e6ac4ebebb37abcc8
+  constrains:
+  - __osx>=10.12
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3574232
+  timestamp: 1749590811624
+- conda: https://conda.anaconda.org/conda-forge/win-64/buildifier-3.5.0-hd02998f_0.tar.bz2
+  sha256: afda33b7fd4fbc13ed898dd5dca57aba540fdf8c3e523647e21b2730b82e924b
+  md5: e2d4a135cf59c4229ec3705165fb0c2d
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3694861
+  timestamp: 1608850338506
+- conda: https://conda.anaconda.org/conda-forge/win-64/buildifier-4.0.1-hd02998f_0.tar.bz2
+  sha256: 9697e8501c0020f657c7d58ad5acdf22fd0d9b509659bf03df04c92fff138168
+  md5: e58a01d2a3fe28c81476ecc06107f90c
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3587260
+  timestamp: 1614611724806
+- conda: https://conda.anaconda.org/conda-forge/win-64/buildifier-4.2.5-hd02998f_0.tar.bz2
+  sha256: da8ff079b04648807488a04b2ea4fb34825da8cb04c289f4e94d6426b70c8d0f
+  md5: bb86913c35e2b1d1776656579263d3ad
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3493302
+  timestamp: 1642088698674
+- conda: https://conda.anaconda.org/conda-forge/win-64/buildifier-5.0.1-hd02998f_0.tar.bz2
+  sha256: 00ef15727330da1745e964218519fe6d462381d4cd3e5310586e309da069fcdb
+  md5: 04156571b117d624a506cff989212ba0
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3501244
+  timestamp: 1644589447986
+- conda: https://conda.anaconda.org/conda-forge/win-64/buildifier-5.1.0-hd02998f_0.tar.bz2
+  sha256: 68f5f29255e78c6d094f62c346c86a1d1cb61f72a2eea762d4bc9751e6758f32
+  md5: cf313d417238e6b7433d81e4ee9bc88a
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3510942
+  timestamp: 1649960786020
+- conda: https://conda.anaconda.org/conda-forge/win-64/buildifier-6.0.1-hd02998f_0.conda
+  sha256: 771c2a259968f0227e10c046806010a7f79dd52543328201a2c576bbc32cdf5d
+  md5: 7942cdaf19c86140050a21b0939a4392
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3406022
+  timestamp: 1675230847800
+- conda: https://conda.anaconda.org/conda-forge/win-64/buildifier-6.1.2-hd02998f_0.conda
+  sha256: 387183ef88efdbe67c6aec26822c3aa40d9ec460d6a1bf7f879018470e234847
+  md5: 32c17e6cf5f555e7e3b4808cd8f262e4
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3424216
+  timestamp: 1682647207053
+- conda: https://conda.anaconda.org/conda-forge/win-64/buildifier-6.3.3-hd02998f_0.conda
+  sha256: cdb28bfe84592b122a117eae598fdad29815557e1e3629c9167fb9b27332029c
+  md5: 22b76ed21f233af2b2dd0d8386b8bb8b
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3608521
+  timestamp: 1692980154628
+- conda: https://conda.anaconda.org/conda-forge/win-64/buildifier-6.4.0-hd02998f_0.conda
+  sha256: e08c32c780f6a9a668efc8aa02b9844856f37acfb09ffc17b114e6fe352bdcf5
+  md5: e68ffe67ca6b228c96a4b629e09714f6
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3596626
+  timestamp: 1700215666381
+- conda: https://conda.anaconda.org/conda-forge/win-64/buildifier-7.1.2-hd02998f_0.conda
+  sha256: 852c60086ffba4cd81e923e0d56f90f046a12d27476a12d1f036a24c075f553e
+  md5: 62093c0c3bf4cf0d564a51675cfcfe0c
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3673039
+  timestamp: 1716495466067
+- conda: https://conda.anaconda.org/conda-forge/win-64/buildifier-7.3.1-hd02998f_0.conda
+  sha256: b56b84c88f6b4bb3295d257ed7e5fb12ac971b119314ca5e1f60e7119cb2c35c
+  md5: 21fbb2ffd169960ba902b4bd3536779b
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3572001
+  timestamp: 1724792459436
+- conda: https://conda.anaconda.org/conda-forge/win-64/buildifier-8.0.2-hd02998f_0.conda
+  sha256: 17f8e916bf7418a71caf137edd4053d7940ea1658886bb2a3a6759a596cfde99
+  md5: 685d5792430b0395cfc66faebe8c39b0
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3605764
+  timestamp: 1738272200977
+- conda: https://conda.anaconda.org/conda-forge/win-64/buildifier-8.2.1-hd02998f_0.conda
+  sha256: 3b7b8fbf6f9c7372380a848c2aaa879549a5ac1c7e00c7529703f52357d24e7d
+  md5: 96b885fb5a22e490a50f9e8047ddbd4f
+  license: Apache-2.0
+  license_family: APACHE
+  size: 3677621
+  timestamp: 1749591374443

@@ -10,6 +10,7 @@ run_binary(
     visibility = ["//visibility:public"],
 )
 
+
 run_binary(
     name = "0.1",
     environment = "@ruff_0.1",
@@ -19,6 +20,7 @@ run_binary(
     }),
     visibility = ["//visibility:public"],
 )
+
 
 run_binary(
     name = "0.2",
@@ -30,6 +32,7 @@ run_binary(
     visibility = ["//visibility:public"],
 )
 
+
 run_binary(
     name = "0.3",
     environment = "@ruff_0.3",
@@ -39,6 +42,7 @@ run_binary(
     }),
     visibility = ["//visibility:public"],
 )
+
 
 run_binary(
     name = "0.4",
@@ -50,6 +54,7 @@ run_binary(
     visibility = ["//visibility:public"],
 )
 
+
 run_binary(
     name = "0.5",
     environment = "@ruff_0.5",
@@ -59,6 +64,7 @@ run_binary(
     }),
     visibility = ["//visibility:public"],
 )
+
 
 run_binary(
     name = "0.6",
@@ -70,6 +76,7 @@ run_binary(
     visibility = ["//visibility:public"],
 )
 
+
 run_binary(
     name = "0.7",
     environment = "@ruff_0.7",
@@ -79,6 +86,7 @@ run_binary(
     }),
     visibility = ["//visibility:public"],
 )
+
 
 run_binary(
     name = "0.8",
@@ -90,6 +98,7 @@ run_binary(
     visibility = ["//visibility:public"],
 )
 
+
 run_binary(
     name = "0.9",
     environment = "@ruff_0.9",
@@ -99,6 +108,7 @@ run_binary(
     }),
     visibility = ["//visibility:public"],
 )
+
 
 run_binary(
     name = "0.10",
@@ -110,6 +120,7 @@ run_binary(
     visibility = ["//visibility:public"],
 )
 
+
 run_binary(
     name = "0.11",
     environment = "@ruff_0.11",
@@ -119,6 +130,7 @@ run_binary(
     }),
     visibility = ["//visibility:public"],
 )
+
 
 run_binary(
     name = "0.12",
@@ -130,6 +142,7 @@ run_binary(
     visibility = ["//visibility:public"],
 )
 
+
 run_binary(
     name = "0.13",
     environment = "@ruff_0.13",
@@ -140,6 +153,7 @@ run_binary(
     visibility = ["//visibility:public"],
 )
 
+
 run_binary(
     name = "0.14",
     environment = "@ruff_0.14",
@@ -149,6 +163,7 @@ run_binary(
     }),
     visibility = ["//visibility:public"],
 )
+
 
 alias(
     name = "ruff",

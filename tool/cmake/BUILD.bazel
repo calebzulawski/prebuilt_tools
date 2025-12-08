@@ -10,6 +10,7 @@ run_binary(
     visibility = ["//visibility:public"],
 )
 
+
 run_binary(
     name = "3.15",
     environment = "@cmake_3.15",
@@ -19,6 +20,7 @@ run_binary(
     }),
     visibility = ["//visibility:public"],
 )
+
 
 run_binary(
     name = "3.16",
@@ -30,6 +32,7 @@ run_binary(
     visibility = ["//visibility:public"],
 )
 
+
 run_binary(
     name = "3.17",
     environment = "@cmake_3.17",
@@ -39,6 +42,7 @@ run_binary(
     }),
     visibility = ["//visibility:public"],
 )
+
 
 run_binary(
     name = "3.18",
@@ -50,6 +54,7 @@ run_binary(
     visibility = ["//visibility:public"],
 )
 
+
 run_binary(
     name = "3.19",
     environment = "@cmake_3.19",
@@ -59,6 +64,7 @@ run_binary(
     }),
     visibility = ["//visibility:public"],
 )
+
 
 run_binary(
     name = "3.20",
@@ -70,6 +76,7 @@ run_binary(
     visibility = ["//visibility:public"],
 )
 
+
 run_binary(
     name = "3.21",
     environment = "@cmake_3.21",
@@ -79,6 +86,7 @@ run_binary(
     }),
     visibility = ["//visibility:public"],
 )
+
 
 run_binary(
     name = "3.22",
@@ -90,6 +98,7 @@ run_binary(
     visibility = ["//visibility:public"],
 )
 
+
 run_binary(
     name = "3.23",
     environment = "@cmake_3.23",
@@ -99,6 +108,7 @@ run_binary(
     }),
     visibility = ["//visibility:public"],
 )
+
 
 run_binary(
     name = "3.24",
@@ -110,6 +120,7 @@ run_binary(
     visibility = ["//visibility:public"],
 )
 
+
 run_binary(
     name = "3.25",
     environment = "@cmake_3.25",
@@ -119,6 +130,7 @@ run_binary(
     }),
     visibility = ["//visibility:public"],
 )
+
 
 run_binary(
     name = "3.26",
@@ -130,6 +142,7 @@ run_binary(
     visibility = ["//visibility:public"],
 )
 
+
 run_binary(
     name = "3.27",
     environment = "@cmake_3.27",
@@ -139,6 +152,7 @@ run_binary(
     }),
     visibility = ["//visibility:public"],
 )
+
 
 run_binary(
     name = "3.28",
@@ -150,6 +164,7 @@ run_binary(
     visibility = ["//visibility:public"],
 )
 
+
 run_binary(
     name = "3.29",
     environment = "@cmake_3.29",
@@ -159,6 +174,7 @@ run_binary(
     }),
     visibility = ["//visibility:public"],
 )
+
 
 run_binary(
     name = "3.30",
@@ -170,6 +186,7 @@ run_binary(
     visibility = ["//visibility:public"],
 )
 
+
 run_binary(
     name = "3.31",
     environment = "@cmake_3.31",
@@ -179,6 +196,7 @@ run_binary(
     }),
     visibility = ["//visibility:public"],
 )
+
 
 run_binary(
     name = "4.0",
@@ -190,6 +208,7 @@ run_binary(
     visibility = ["//visibility:public"],
 )
 
+
 run_binary(
     name = "4.1",
     environment = "@cmake_4.1",
@@ -200,6 +219,7 @@ run_binary(
     visibility = ["//visibility:public"],
 )
 
+
 run_binary(
     name = "4.2",
     environment = "@cmake_4.2",
@@ -209,6 +229,7 @@ run_binary(
     }),
     visibility = ["//visibility:public"],
 )
+
 
 alias(
     name = "cmake",

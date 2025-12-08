@@ -1,8 +1,6 @@
-load("@rules_conda//conda/environment:defs.bzl", "lock_environments")
+load("//private:generated_locks.bzl", "define_conda_locks")
 
-lock_environments(
-    name = "lock",
-    environments = glob(["specs/**/*.yml"]),
-    macos_version = "11",
+define_conda_locks(
     glibc_version = "2.17",
+    macos_version = "11",
 )
