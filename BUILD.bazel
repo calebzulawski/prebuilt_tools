@@ -1,0 +1,3 @@
+exports_files([
+    "run_tool_help_test.sh",
+])

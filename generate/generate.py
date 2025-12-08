@@ -27,6 +27,7 @@ from rattler.solver.solver import solve as solve_environment
 
 
 DEFAULT_CHANNEL_URL = "https://conda.anaconda.org/conda-forge"
+HELP_TEST_SCRIPT = "//:run_tool_help_test.sh"
 SKIP_PLATFORMS = {"win-32"}
 DEFAULT_SUBDIRS = tuple(
     str(platform) for platform in Platform.all() if str(platform) not in SKIP_PLATFORMS
@@ -450,6 +451,19 @@ def write_tools_build_files(
                         name = "{tool_name}",
                         actual = ":{latest_version}",
                         visibility = ["//visibility:public"],
+                    )
+
+                    """
+                )
+            )
+            lines.append(
+                textwrap.dedent(
+                    f"""\
+                    sh_test(
+                        name = "help_test",
+                        srcs = ["{HELP_TEST_SCRIPT}"],
+                        args = ["$(location :{latest_version})"],
+                        data = [":{latest_version}"],
                     )
 
                     """

@@ -1,0 +1,59 @@
+load("@rules_conda//conda/environment:defs.bzl", "run_binary")
+
+run_binary(
+    name = "2.2",
+    environment = "@pkgconf_2.2",
+    path = select({
+        "@platforms//os:windows": "Library/bin/pkgconf",
+        "//conditions:default": "bin/pkgconf",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+
+run_binary(
+    name = "2.3",
+    environment = "@pkgconf_2.3",
+    path = select({
+        "@platforms//os:windows": "Library/bin/pkgconf",
+        "//conditions:default": "bin/pkgconf",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+
+run_binary(
+    name = "2.4",
+    environment = "@pkgconf_2.4",
+    path = select({
+        "@platforms//os:windows": "Library/bin/pkgconf",
+        "//conditions:default": "bin/pkgconf",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+
+run_binary(
+    name = "2.5",
+    environment = "@pkgconf_2.5",
+    path = select({
+        "@platforms//os:windows": "Library/bin/pkgconf",
+        "//conditions:default": "bin/pkgconf",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+
+alias(
+    name = "pkgconf",
+    actual = ":2.5",
+    visibility = ["//visibility:public"],
+)
+
+
+sh_test(
+    name = "help_test",
+    srcs = ["//:run_tool_help_test.sh"],
+    args = ["$(location :2.5)"],
+    data = [":2.5"],
+)

@@ -193,6 +193,12 @@ _PACKAGE_SPECS = {
             "specs/pkg-config/pkg_config_0.28.yml",
             "specs/pkg-config/pkg_config_0.29.yml",
         ],
+    "pkgconf": [
+            "specs/pkgconf/pkgconf_2.2.yml",
+            "specs/pkgconf/pkgconf_2.3.yml",
+            "specs/pkgconf/pkgconf_2.4.yml",
+            "specs/pkgconf/pkgconf_2.5.yml",
+        ],
     "ruff": [
             "specs/ruff/ruff_0.0.yml",
             "specs/ruff/ruff_0.1.yml",

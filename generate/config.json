@@ -18,7 +18,11 @@
   },
   {
     "package": "pkg-config",
-    "executables": ["pkg-config"]
+    "executables": ["pkg-config.bin"]
+  },
+  {
+    "package": "pkgconf",
+    "executables": ["pkgconf"]
   },
   {
     "package": "m4",

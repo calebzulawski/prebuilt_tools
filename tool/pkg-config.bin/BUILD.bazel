@@ -4,8 +4,8 @@ run_binary(
     name = "0.28",
     environment = "@pkg_config_0.28",
     path = select({
-        "@platforms//os:windows": "Library/bin/pkg-config",
-        "//conditions:default": "bin/pkg-config",
+        "@platforms//os:windows": "Library/bin/pkg-config.bin",
+        "//conditions:default": "bin/pkg-config.bin",
     }),
     visibility = ["//visibility:public"],
 )
@@ -15,15 +15,23 @@ run_binary(
     name = "0.29",
     environment = "@pkg_config_0.29",
     path = select({
-        "@platforms//os:windows": "Library/bin/pkg-config",
-        "//conditions:default": "bin/pkg-config",
+        "@platforms//os:windows": "Library/bin/pkg-config.bin",
+        "//conditions:default": "bin/pkg-config.bin",
     }),
     visibility = ["//visibility:public"],
 )
 
 
 alias(
-    name = "pkg-config",
+    name = "pkg-config.bin",
     actual = ":0.29",
     visibility = ["//visibility:public"],
+)
+
+
+sh_test(
+    name = "help_test",
+    srcs = ["//:run_tool_help_test.sh"],
+    args = ["$(location :0.29)"],
+    data = [":0.29"],
 )

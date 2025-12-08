@@ -38,3 +38,11 @@ alias(
     actual = ":4.4",
     visibility = ["//visibility:public"],
 )
+
+
+sh_test(
+    name = "help_test",
+    srcs = ["//:run_tool_help_test.sh"],
+    args = ["$(location :4.4)"],
+    data = [":4.4"],
+)
