@@ -1,0 +1,9 @@
+name: buildifier_8.2
+channels:
+  - conda-forge
+dependencies:
+  - buildifier>=8.2,<8.3
+platforms:
+  - linux-64
+  - osx-64
+  - win-64

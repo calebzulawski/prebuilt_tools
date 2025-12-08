@@ -1,0 +1,11 @@
+name: yq_2.5
+channels:
+  - conda-forge
+dependencies:
+  - yq>=2.5,<2.6
+platforms:
+  - linux-64
+  - linux-aarch64
+  - linux-ppc64le
+  - osx-64
+  - osx-arm64

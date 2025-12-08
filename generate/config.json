@@ -33,5 +33,49 @@
   {
     "package": "automake",
     "executables": ["automake"]
+  },
+  {
+    "package": "binutils",
+    "executables": ["readelf"]
+  },
+  {
+    "package": "doxygen",
+    "executables": ["doxygen"]
+  },
+  {
+    "package": "ruff",
+    "executables": ["ruff"]
+  },
+  {
+    "package": "buildifier",
+    "executables": ["buildifier"]
+  },
+  {
+    "package": "jq",
+    "executables": ["jq"]
+  },
+  {
+    "package": "yq",
+    "executables": ["yq"]
+  },
+  {
+    "package": "grep",
+    "executables": ["grep"]
+  },
+  {
+    "package": "awk",
+    "executables": ["awk"]
+  },
+  {
+    "package": "pandoc",
+    "executables": ["pandoc"]
+  },
+  {
+    "package": "bison",
+    "executables": ["bison"]
+  },
+  {
+    "package": "flex",
+    "executables": ["flex"]
   }
 ]

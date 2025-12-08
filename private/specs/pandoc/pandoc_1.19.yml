@@ -1,0 +1,9 @@
+name: pandoc_1.19
+channels:
+  - conda-forge
+dependencies:
+  - pandoc>=1.19,<1.20
+platforms:
+  - linux-64
+  - osx-64
+  - win-64

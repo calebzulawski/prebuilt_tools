@@ -1,0 +1,9 @@
+name: pandoc_1.17
+channels:
+  - conda-forge
+dependencies:
+  - pandoc>=1.17,<1.18
+platforms:
+  - linux-64
+  - osx-64
+  - win-64

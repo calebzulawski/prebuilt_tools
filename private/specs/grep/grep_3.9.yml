@@ -1,0 +1,11 @@
+name: grep_3.9
+channels:
+  - conda-forge
+dependencies:
+  - grep>=3.9,<3.10
+platforms:
+  - linux-64
+  - linux-aarch64
+  - linux-ppc64le
+  - osx-64
+  - osx-arm64

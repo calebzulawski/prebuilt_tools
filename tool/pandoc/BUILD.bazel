@@ -1,0 +1,327 @@
+load("@rules_conda//conda/environment:defs.bzl", "run_binary")
+
+run_binary(
+    name = "1.16",
+    environment = "@pandoc_1.16",
+    path = select({
+        "@platforms//os:windows": "Library/bin/pandoc",
+        "//conditions:default": "bin/pandoc",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "1.17",
+    environment = "@pandoc_1.17",
+    path = select({
+        "@platforms//os:windows": "Library/bin/pandoc",
+        "//conditions:default": "bin/pandoc",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "1.18",
+    environment = "@pandoc_1.18",
+    path = select({
+        "@platforms//os:windows": "Library/bin/pandoc",
+        "//conditions:default": "bin/pandoc",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "1.19",
+    environment = "@pandoc_1.19",
+    path = select({
+        "@platforms//os:windows": "Library/bin/pandoc",
+        "//conditions:default": "bin/pandoc",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "2.0",
+    environment = "@pandoc_2.0",
+    path = select({
+        "@platforms//os:windows": "Library/bin/pandoc",
+        "//conditions:default": "bin/pandoc",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "2.1",
+    environment = "@pandoc_2.1",
+    path = select({
+        "@platforms//os:windows": "Library/bin/pandoc",
+        "//conditions:default": "bin/pandoc",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "2.2",
+    environment = "@pandoc_2.2",
+    path = select({
+        "@platforms//os:windows": "Library/bin/pandoc",
+        "//conditions:default": "bin/pandoc",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "2.3",
+    environment = "@pandoc_2.3",
+    path = select({
+        "@platforms//os:windows": "Library/bin/pandoc",
+        "//conditions:default": "bin/pandoc",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "2.4",
+    environment = "@pandoc_2.4",
+    path = select({
+        "@platforms//os:windows": "Library/bin/pandoc",
+        "//conditions:default": "bin/pandoc",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "2.5",
+    environment = "@pandoc_2.5",
+    path = select({
+        "@platforms//os:windows": "Library/bin/pandoc",
+        "//conditions:default": "bin/pandoc",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "2.6",
+    environment = "@pandoc_2.6",
+    path = select({
+        "@platforms//os:windows": "Library/bin/pandoc",
+        "//conditions:default": "bin/pandoc",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "2.7",
+    environment = "@pandoc_2.7",
+    path = select({
+        "@platforms//os:windows": "Library/bin/pandoc",
+        "//conditions:default": "bin/pandoc",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "2.8",
+    environment = "@pandoc_2.8",
+    path = select({
+        "@platforms//os:windows": "Library/bin/pandoc",
+        "//conditions:default": "bin/pandoc",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "2.9",
+    environment = "@pandoc_2.9",
+    path = select({
+        "@platforms//os:windows": "Library/bin/pandoc",
+        "//conditions:default": "bin/pandoc",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "2.10",
+    environment = "@pandoc_2.10",
+    path = select({
+        "@platforms//os:windows": "Library/bin/pandoc",
+        "//conditions:default": "bin/pandoc",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "2.11",
+    environment = "@pandoc_2.11",
+    path = select({
+        "@platforms//os:windows": "Library/bin/pandoc",
+        "//conditions:default": "bin/pandoc",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "2.12",
+    environment = "@pandoc_2.12",
+    path = select({
+        "@platforms//os:windows": "Library/bin/pandoc",
+        "//conditions:default": "bin/pandoc",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "2.13",
+    environment = "@pandoc_2.13",
+    path = select({
+        "@platforms//os:windows": "Library/bin/pandoc",
+        "//conditions:default": "bin/pandoc",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "2.14",
+    environment = "@pandoc_2.14",
+    path = select({
+        "@platforms//os:windows": "Library/bin/pandoc",
+        "//conditions:default": "bin/pandoc",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "2.15",
+    environment = "@pandoc_2.15",
+    path = select({
+        "@platforms//os:windows": "Library/bin/pandoc",
+        "//conditions:default": "bin/pandoc",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "2.16",
+    environment = "@pandoc_2.16",
+    path = select({
+        "@platforms//os:windows": "Library/bin/pandoc",
+        "//conditions:default": "bin/pandoc",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "2.17",
+    environment = "@pandoc_2.17",
+    path = select({
+        "@platforms//os:windows": "Library/bin/pandoc",
+        "//conditions:default": "bin/pandoc",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "2.18",
+    environment = "@pandoc_2.18",
+    path = select({
+        "@platforms//os:windows": "Library/bin/pandoc",
+        "//conditions:default": "bin/pandoc",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "2.19",
+    environment = "@pandoc_2.19",
+    path = select({
+        "@platforms//os:windows": "Library/bin/pandoc",
+        "//conditions:default": "bin/pandoc",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "3.1",
+    environment = "@pandoc_3.1",
+    path = select({
+        "@platforms//os:windows": "Library/bin/pandoc",
+        "//conditions:default": "bin/pandoc",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "3.2",
+    environment = "@pandoc_3.2",
+    path = select({
+        "@platforms//os:windows": "Library/bin/pandoc",
+        "//conditions:default": "bin/pandoc",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "3.3",
+    environment = "@pandoc_3.3",
+    path = select({
+        "@platforms//os:windows": "Library/bin/pandoc",
+        "//conditions:default": "bin/pandoc",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "3.4",
+    environment = "@pandoc_3.4",
+    path = select({
+        "@platforms//os:windows": "Library/bin/pandoc",
+        "//conditions:default": "bin/pandoc",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "3.5",
+    environment = "@pandoc_3.5",
+    path = select({
+        "@platforms//os:windows": "Library/bin/pandoc",
+        "//conditions:default": "bin/pandoc",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "3.6",
+    environment = "@pandoc_3.6",
+    path = select({
+        "@platforms//os:windows": "Library/bin/pandoc",
+        "//conditions:default": "bin/pandoc",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "3.7",
+    environment = "@pandoc_3.7",
+    path = select({
+        "@platforms//os:windows": "Library/bin/pandoc",
+        "//conditions:default": "bin/pandoc",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "3.8",
+    environment = "@pandoc_3.8",
+    path = select({
+        "@platforms//os:windows": "Library/bin/pandoc",
+        "//conditions:default": "bin/pandoc",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "pandoc",
+    actual = ":3.8",
+    visibility = ["//visibility:public"],
+)

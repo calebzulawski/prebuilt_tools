@@ -1,0 +1,9 @@
+name: buildifier_6.1
+channels:
+  - conda-forge
+dependencies:
+  - buildifier>=6.1,<6.2
+platforms:
+  - linux-64
+  - osx-64
+  - win-64

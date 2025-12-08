@@ -1,0 +1,8 @@
+name: yq_2.4
+channels:
+  - conda-forge
+dependencies:
+  - yq>=2.4,<2.5
+platforms:
+  - linux-64
+  - osx-64

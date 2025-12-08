@@ -1,0 +1,9 @@
+name: buildifier_7.3
+channels:
+  - conda-forge
+dependencies:
+  - buildifier>=7.3,<7.4
+platforms:
+  - linux-64
+  - osx-64
+  - win-64

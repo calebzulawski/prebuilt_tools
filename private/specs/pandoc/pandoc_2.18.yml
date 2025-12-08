@@ -1,0 +1,10 @@
+name: pandoc_2.18
+channels:
+  - conda-forge
+dependencies:
+  - pandoc>=2.18,<2.19
+platforms:
+  - linux-64
+  - linux-aarch64
+  - osx-64
+  - win-64

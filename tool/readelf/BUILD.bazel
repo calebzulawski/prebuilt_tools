@@ -1,0 +1,177 @@
+load("@rules_conda//conda/environment:defs.bzl", "run_binary")
+
+run_binary(
+    name = "1.0",
+    environment = "@binutils_1.0",
+    path = select({
+        "@platforms//os:windows": "Library/bin/readelf",
+        "//conditions:default": "bin/readelf",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "2.26",
+    environment = "@binutils_2.26",
+    path = select({
+        "@platforms//os:windows": "Library/bin/readelf",
+        "//conditions:default": "bin/readelf",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "2.27",
+    environment = "@binutils_2.27",
+    path = select({
+        "@platforms//os:windows": "Library/bin/readelf",
+        "//conditions:default": "bin/readelf",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "2.28",
+    environment = "@binutils_2.28",
+    path = select({
+        "@platforms//os:windows": "Library/bin/readelf",
+        "//conditions:default": "bin/readelf",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "2.30",
+    environment = "@binutils_2.30",
+    path = select({
+        "@platforms//os:windows": "Library/bin/readelf",
+        "//conditions:default": "bin/readelf",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "2.31",
+    environment = "@binutils_2.31",
+    path = select({
+        "@platforms//os:windows": "Library/bin/readelf",
+        "//conditions:default": "bin/readelf",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "2.32",
+    environment = "@binutils_2.32",
+    path = select({
+        "@platforms//os:windows": "Library/bin/readelf",
+        "//conditions:default": "bin/readelf",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "2.33",
+    environment = "@binutils_2.33",
+    path = select({
+        "@platforms//os:windows": "Library/bin/readelf",
+        "//conditions:default": "bin/readelf",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "2.34",
+    environment = "@binutils_2.34",
+    path = select({
+        "@platforms//os:windows": "Library/bin/readelf",
+        "//conditions:default": "bin/readelf",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "2.35",
+    environment = "@binutils_2.35",
+    path = select({
+        "@platforms//os:windows": "Library/bin/readelf",
+        "//conditions:default": "bin/readelf",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "2.36",
+    environment = "@binutils_2.36",
+    path = select({
+        "@platforms//os:windows": "Library/bin/readelf",
+        "//conditions:default": "bin/readelf",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "2.39",
+    environment = "@binutils_2.39",
+    path = select({
+        "@platforms//os:windows": "Library/bin/readelf",
+        "//conditions:default": "bin/readelf",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "2.40",
+    environment = "@binutils_2.40",
+    path = select({
+        "@platforms//os:windows": "Library/bin/readelf",
+        "//conditions:default": "bin/readelf",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "2.42",
+    environment = "@binutils_2.42",
+    path = select({
+        "@platforms//os:windows": "Library/bin/readelf",
+        "//conditions:default": "bin/readelf",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "2.43",
+    environment = "@binutils_2.43",
+    path = select({
+        "@platforms//os:windows": "Library/bin/readelf",
+        "//conditions:default": "bin/readelf",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "2.44",
+    environment = "@binutils_2.44",
+    path = select({
+        "@platforms//os:windows": "Library/bin/readelf",
+        "//conditions:default": "bin/readelf",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+run_binary(
+    name = "2.45",
+    environment = "@binutils_2.45",
+    path = select({
+        "@platforms//os:windows": "Library/bin/readelf",
+        "//conditions:default": "bin/readelf",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "readelf",
+    actual = ":2.45",
+    visibility = ["//visibility:public"],
+)

@@ -1,0 +1,8 @@
+name: bison_3.0
+channels:
+  - conda-forge
+dependencies:
+  - bison>=3.0,<3.1
+platforms:
+  - linux-64
+  - osx-64

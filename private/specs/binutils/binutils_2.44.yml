@@ -1,0 +1,12 @@
+name: binutils_2.44
+channels:
+  - conda-forge
+dependencies:
+  - binutils>=2.44,<2.45
+platforms:
+  - linux-64
+  - linux-aarch64
+  - linux-ppc64le
+  - osx-64
+  - osx-arm64
+  - win-64

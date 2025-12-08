@@ -1,0 +1,11 @@
+name: jq_1.6
+channels:
+  - conda-forge
+dependencies:
+  - jq>=1.6,<1.7
+platforms:
+  - linux-64
+  - linux-aarch64
+  - linux-ppc64le
+  - osx-64
+  - osx-arm64

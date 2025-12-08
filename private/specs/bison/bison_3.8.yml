@@ -1,0 +1,11 @@
+name: bison_3.8
+channels:
+  - conda-forge
+dependencies:
+  - bison>=3.8,<3.9
+platforms:
+  - linux-64
+  - linux-aarch64
+  - linux-ppc64le
+  - osx-64
+  - osx-arm64

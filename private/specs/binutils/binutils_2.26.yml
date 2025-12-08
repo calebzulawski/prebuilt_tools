@@ -1,0 +1,7 @@
+name: binutils_2.26
+channels:
+  - conda-forge
+dependencies:
+  - binutils>=2.26,<2.27
+platforms:
+  - linux-64

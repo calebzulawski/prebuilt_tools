@@ -1,0 +1,9 @@
+name: buildifier_4.2
+channels:
+  - conda-forge
+dependencies:
+  - buildifier>=4.2,<4.3
+platforms:
+  - linux-64
+  - osx-64
+  - win-64

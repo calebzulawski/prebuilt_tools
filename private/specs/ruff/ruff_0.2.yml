@@ -1,0 +1,12 @@
+name: ruff_0.2
+channels:
+  - conda-forge
+dependencies:
+  - ruff>=0.2,<0.3
+platforms:
+  - linux-64
+  - linux-aarch64
+  - linux-ppc64le
+  - osx-64
+  - osx-arm64
+  - win-64
