@@ -243,4 +243,14 @@ sh_test(
     srcs = ["//:run_tool_help_test.sh"],
     args = ["$(location :4.2)"],
     data = [":4.2"],
+    target_compatible_with =
+    select({
+            "//:platform_linux_64": [],
+            "//:platform_linux_aarch64": [],
+            "//:platform_linux_ppc64le": [],
+            "//:platform_macos_x86_64": [],
+            "//:platform_macos_arm64": [],
+            "//:platform_windows_x86_64": [],
+            "//conditions:default": ["@platforms//:incompatible"],
+        }),
 )

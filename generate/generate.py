@@ -28,6 +28,17 @@ from rattler.solver.solver import solve as solve_environment
 
 DEFAULT_CHANNEL_URL = "https://conda.anaconda.org/conda-forge"
 HELP_TEST_SCRIPT = "//:run_tool_help_test.sh"
+PLATFORM_CONFIG_SETTINGS = {
+    "linux-64": "//:platform_linux_64",
+    "linux-aarch64": "//:platform_linux_aarch64",
+    "linux-armv7l": "//:platform_linux_armv7l",
+    "linux-ppc64le": "//:platform_linux_ppc64le",
+    "linux-s390x": "//:platform_linux_s390x",
+    "osx-64": "//:platform_macos_x86_64",
+    "osx-arm64": "//:platform_macos_arm64",
+    "win-64": "//:platform_windows_x86_64",
+    "win-arm64": "//:platform_windows_arm64",
+}
 SKIP_PLATFORMS = {"win-32"}
 DEFAULT_SUBDIRS = tuple(
     str(platform) for platform in Platform.all() if str(platform) not in SKIP_PLATFORMS
@@ -407,9 +418,32 @@ ensure_lockfiles = rule(
     lock_bzl.write_text(contents)
 
 
+def render_target_compatible_with(platforms: Sequence[str], *, context: str) -> str:
+    labels = []
+    for platform in sorted(set(platforms)):
+        label = PLATFORM_CONFIG_SETTINGS.get(platform)
+        if label:
+            labels.append(label)
+        else:
+            print(
+                f"warning: no config_setting mapping for platform '{platform}' used in {context}",
+                file=sys.stderr,
+            )
+    if not labels:
+        return "[]"
+    entries = "\n".join(f'        "{label}": [],' for label in labels)
+    return (
+        "select({\n"
+        f"{entries}\n"
+        '        "//conditions:default": ["@platforms//:incompatible"],\n'
+        "    })"
+    )
+
+
 def write_tools_build_files(
     repo_root: Path,
     tool_versions: Dict[str, Dict[str, str]],
+    environment_platforms: Dict[str, Set[str]],
 ) -> None:
     tool_root = repo_root / "tool"
     if tool_root.exists():
@@ -444,6 +478,12 @@ def write_tools_build_files(
             )
         if versions:
             latest_version = versions[-1][0]
+            latest_environment = versions[-1][1]
+            compatibility_expr = render_target_compatible_with(
+                sorted(environment_platforms.get(latest_environment, [])),
+                context=f"{tool_name}:{latest_version}",
+            )
+            indented_compat = textwrap.indent(compatibility_expr, " " * 12)
             lines.append(
                 textwrap.dedent(
                     f"""\
@@ -456,17 +496,20 @@ def write_tools_build_files(
                     """
                 )
             )
+            compatibility_block = textwrap.indent(compatibility_expr, " " * 4)
             lines.append(
-                textwrap.dedent(
-                    f"""\
-                    sh_test(
-                        name = "help_test",
-                        srcs = ["{HELP_TEST_SCRIPT}"],
-                        args = ["$(location :{latest_version})"],
-                        data = [":{latest_version}"],
-                    )
-
-                    """
+                "\n".join(
+                    [
+                        "sh_test(",
+                        '    name = "help_test",',
+                        f'    srcs = ["{HELP_TEST_SCRIPT}"],',
+                        f'    args = ["$(location :{latest_version})"],',
+                        f'    data = [":{latest_version}"],',
+                        "    target_compatible_with =",
+                        f"{compatibility_block},",
+                        ")",
+                        "",
+                    ]
                 )
             )
         build_path = package_dir / "BUILD.bazel"
@@ -633,7 +676,7 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     write_lock_definitions(repo_root, generated_files)
     write_generated_module(repo_root, environment_packages)
-    write_tools_build_files(repo_root, tool_versions)
+    write_tools_build_files(repo_root, tool_versions, environment_platforms)
     write_readmes(repo_root, tool_versions, environment_platforms)
 
     return 0
