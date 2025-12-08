@@ -1,0 +1,16 @@
+{
+  "homepage": "https://github.com/calebzulawski/prebuilt_tools",
+  "maintainers": [
+    {
+      "name": "Caleb Zulawski",
+      "email": "caleb.zulawski@gmail.com",
+      "github": "calebzulawski",
+      "github_user_id": 563826
+    }
+  ],
+  "repository": [
+    "github:calebzulawski/prebuilt_tools"
+  ],
+  "versions": [],
+  "yanked_versions": {}
+}
