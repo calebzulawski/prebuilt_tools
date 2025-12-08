@@ -453,6 +453,7 @@ def write_tools_build_files(
         package_dir.mkdir(parents=True, exist_ok=True)
         lines = [
             'load("@rules_conda//conda/environment:defs.bzl", "run_binary")',
+            'load("@rules_shell//shell:sh_test.bzl", "sh_test")',
             "",
         ]
         versions = sorted(

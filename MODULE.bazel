@@ -6,6 +6,7 @@ module(
 bazel_dep(name = "platforms", version = "1.0.0")
 bazel_dep(name = "rules_conda", version = "0.1.2")
 bazel_dep(name = "rules_multirun", version = "0.13.0")
+bazel_dep(name = "rules_shell", version = "0.6.1")
 
 bazel_dep(name = "rules_python", version = "1.7.0", dev_dependency = True)
 
