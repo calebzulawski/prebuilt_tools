@@ -476,6 +476,11 @@ def write_tools_build_files(
             key=lambda item: minor_str_to_tuple(item[0]),
         )
         for minor_version, environment_name in versions:
+            windows_binary = (
+                tool_name
+                if tool_name.endswith(".exe")
+                else f"{tool_name}.exe"
+            )
             lines.append(
                 textwrap.dedent(
                     f"""\
@@ -483,7 +488,7 @@ def write_tools_build_files(
                         name = "{minor_version}",
                         environment = "@{environment_name}",
                         path = select({{
-                            "@platforms//os:windows": "Library/bin/{tool_name}",
+                            "@platforms//os:windows": "Library/bin/{windows_binary}",
                             "//conditions:default": "bin/{tool_name}",
                         }}),
                         visibility = ["//visibility:public"],

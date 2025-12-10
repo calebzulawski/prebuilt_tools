@@ -5,7 +5,7 @@ run_binary(
     name = "4.2",
     environment = "@make_4.2",
     path = select({
-        "@platforms//os:windows": "Library/bin/make",
+        "@platforms//os:windows": "Library/bin/make.exe",
         "//conditions:default": "bin/make",
     }),
     visibility = ["//visibility:public"],
@@ -16,7 +16,7 @@ run_binary(
     name = "4.3",
     environment = "@make_4.3",
     path = select({
-        "@platforms//os:windows": "Library/bin/make",
+        "@platforms//os:windows": "Library/bin/make.exe",
         "//conditions:default": "bin/make",
     }),
     visibility = ["//visibility:public"],
@@ -27,7 +27,7 @@ run_binary(
     name = "4.4",
     environment = "@make_4.4",
     path = select({
-        "@platforms//os:windows": "Library/bin/make",
+        "@platforms//os:windows": "Library/bin/make.exe",
         "//conditions:default": "bin/make",
     }),
     visibility = ["//visibility:public"],

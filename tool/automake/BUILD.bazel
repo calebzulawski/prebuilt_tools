@@ -5,7 +5,7 @@ run_binary(
     name = "1.14",
     environment = "@automake_1.14",
     path = select({
-        "@platforms//os:windows": "Library/bin/automake",
+        "@platforms//os:windows": "Library/bin/automake.exe",
         "//conditions:default": "bin/automake",
     }),
     visibility = ["//visibility:public"],
@@ -16,7 +16,7 @@ run_binary(
     name = "1.15",
     environment = "@automake_1.15",
     path = select({
-        "@platforms//os:windows": "Library/bin/automake",
+        "@platforms//os:windows": "Library/bin/automake.exe",
         "//conditions:default": "bin/automake",
     }),
     visibility = ["//visibility:public"],
@@ -27,7 +27,7 @@ run_binary(
     name = "1.16",
     environment = "@automake_1.16",
     path = select({
-        "@platforms//os:windows": "Library/bin/automake",
+        "@platforms//os:windows": "Library/bin/automake.exe",
         "//conditions:default": "bin/automake",
     }),
     visibility = ["//visibility:public"],
@@ -38,7 +38,7 @@ run_binary(
     name = "1.17",
     environment = "@automake_1.17",
     path = select({
-        "@platforms//os:windows": "Library/bin/automake",
+        "@platforms//os:windows": "Library/bin/automake.exe",
         "//conditions:default": "bin/automake",
     }),
     visibility = ["//visibility:public"],

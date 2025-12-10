@@ -5,7 +5,7 @@ run_binary(
     name = "2.5",
     environment = "@flex_2.5",
     path = select({
-        "@platforms//os:windows": "Library/bin/flex",
+        "@platforms//os:windows": "Library/bin/flex.exe",
         "//conditions:default": "bin/flex",
     }),
     visibility = ["//visibility:public"],
@@ -16,7 +16,7 @@ run_binary(
     name = "2.6",
     environment = "@flex_2.6",
     path = select({
-        "@platforms//os:windows": "Library/bin/flex",
+        "@platforms//os:windows": "Library/bin/flex.exe",
         "//conditions:default": "bin/flex",
     }),
     visibility = ["//visibility:public"],

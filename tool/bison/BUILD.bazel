@@ -5,7 +5,7 @@ run_binary(
     name = "3.0",
     environment = "@bison_3.0",
     path = select({
-        "@platforms//os:windows": "Library/bin/bison",
+        "@platforms//os:windows": "Library/bin/bison.exe",
         "//conditions:default": "bin/bison",
     }),
     visibility = ["//visibility:public"],
@@ -16,7 +16,7 @@ run_binary(
     name = "3.1",
     environment = "@bison_3.1",
     path = select({
-        "@platforms//os:windows": "Library/bin/bison",
+        "@platforms//os:windows": "Library/bin/bison.exe",
         "//conditions:default": "bin/bison",
     }),
     visibility = ["//visibility:public"],
@@ -27,7 +27,7 @@ run_binary(
     name = "3.4",
     environment = "@bison_3.4",
     path = select({
-        "@platforms//os:windows": "Library/bin/bison",
+        "@platforms//os:windows": "Library/bin/bison.exe",
         "//conditions:default": "bin/bison",
     }),
     visibility = ["//visibility:public"],
@@ -38,7 +38,7 @@ run_binary(
     name = "3.8",
     environment = "@bison_3.8",
     path = select({
-        "@platforms//os:windows": "Library/bin/bison",
+        "@platforms//os:windows": "Library/bin/bison.exe",
         "//conditions:default": "bin/bison",
     }),
     visibility = ["//visibility:public"],

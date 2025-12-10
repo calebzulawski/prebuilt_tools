@@ -5,7 +5,7 @@ run_binary(
     name = "1.8",
     environment = "@doxygen_1.8",
     path = select({
-        "@platforms//os:windows": "Library/bin/doxygen",
+        "@platforms//os:windows": "Library/bin/doxygen.exe",
         "//conditions:default": "bin/doxygen",
     }),
     visibility = ["//visibility:public"],
@@ -16,7 +16,7 @@ run_binary(
     name = "1.9",
     environment = "@doxygen_1.9",
     path = select({
-        "@platforms//os:windows": "Library/bin/doxygen",
+        "@platforms//os:windows": "Library/bin/doxygen.exe",
         "//conditions:default": "bin/doxygen",
     }),
     visibility = ["//visibility:public"],
@@ -27,7 +27,7 @@ run_binary(
     name = "1.10",
     environment = "@doxygen_1.10",
     path = select({
-        "@platforms//os:windows": "Library/bin/doxygen",
+        "@platforms//os:windows": "Library/bin/doxygen.exe",
         "//conditions:default": "bin/doxygen",
     }),
     visibility = ["//visibility:public"],
@@ -38,7 +38,7 @@ run_binary(
     name = "1.11",
     environment = "@doxygen_1.11",
     path = select({
-        "@platforms//os:windows": "Library/bin/doxygen",
+        "@platforms//os:windows": "Library/bin/doxygen.exe",
         "//conditions:default": "bin/doxygen",
     }),
     visibility = ["//visibility:public"],
@@ -49,7 +49,7 @@ run_binary(
     name = "1.12",
     environment = "@doxygen_1.12",
     path = select({
-        "@platforms//os:windows": "Library/bin/doxygen",
+        "@platforms//os:windows": "Library/bin/doxygen.exe",
         "//conditions:default": "bin/doxygen",
     }),
     visibility = ["//visibility:public"],
@@ -60,7 +60,7 @@ run_binary(
     name = "1.13",
     environment = "@doxygen_1.13",
     path = select({
-        "@platforms//os:windows": "Library/bin/doxygen",
+        "@platforms//os:windows": "Library/bin/doxygen.exe",
         "//conditions:default": "bin/doxygen",
     }),
     visibility = ["//visibility:public"],

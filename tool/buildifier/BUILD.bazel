@@ -5,7 +5,7 @@ run_binary(
     name = "3.5",
     environment = "@buildifier_3.5",
     path = select({
-        "@platforms//os:windows": "Library/bin/buildifier",
+        "@platforms//os:windows": "Library/bin/buildifier.exe",
         "//conditions:default": "bin/buildifier",
     }),
     visibility = ["//visibility:public"],
@@ -16,7 +16,7 @@ run_binary(
     name = "4.0",
     environment = "@buildifier_4.0",
     path = select({
-        "@platforms//os:windows": "Library/bin/buildifier",
+        "@platforms//os:windows": "Library/bin/buildifier.exe",
         "//conditions:default": "bin/buildifier",
     }),
     visibility = ["//visibility:public"],
@@ -27,7 +27,7 @@ run_binary(
     name = "4.2",
     environment = "@buildifier_4.2",
     path = select({
-        "@platforms//os:windows": "Library/bin/buildifier",
+        "@platforms//os:windows": "Library/bin/buildifier.exe",
         "//conditions:default": "bin/buildifier",
     }),
     visibility = ["//visibility:public"],
@@ -38,7 +38,7 @@ run_binary(
     name = "5.0",
     environment = "@buildifier_5.0",
     path = select({
-        "@platforms//os:windows": "Library/bin/buildifier",
+        "@platforms//os:windows": "Library/bin/buildifier.exe",
         "//conditions:default": "bin/buildifier",
     }),
     visibility = ["//visibility:public"],
@@ -49,7 +49,7 @@ run_binary(
     name = "5.1",
     environment = "@buildifier_5.1",
     path = select({
-        "@platforms//os:windows": "Library/bin/buildifier",
+        "@platforms//os:windows": "Library/bin/buildifier.exe",
         "//conditions:default": "bin/buildifier",
     }),
     visibility = ["//visibility:public"],
@@ -60,7 +60,7 @@ run_binary(
     name = "6.0",
     environment = "@buildifier_6.0",
     path = select({
-        "@platforms//os:windows": "Library/bin/buildifier",
+        "@platforms//os:windows": "Library/bin/buildifier.exe",
         "//conditions:default": "bin/buildifier",
     }),
     visibility = ["//visibility:public"],
@@ -71,7 +71,7 @@ run_binary(
     name = "6.1",
     environment = "@buildifier_6.1",
     path = select({
-        "@platforms//os:windows": "Library/bin/buildifier",
+        "@platforms//os:windows": "Library/bin/buildifier.exe",
         "//conditions:default": "bin/buildifier",
     }),
     visibility = ["//visibility:public"],
@@ -82,7 +82,7 @@ run_binary(
     name = "6.3",
     environment = "@buildifier_6.3",
     path = select({
-        "@platforms//os:windows": "Library/bin/buildifier",
+        "@platforms//os:windows": "Library/bin/buildifier.exe",
         "//conditions:default": "bin/buildifier",
     }),
     visibility = ["//visibility:public"],
@@ -93,7 +93,7 @@ run_binary(
     name = "6.4",
     environment = "@buildifier_6.4",
     path = select({
-        "@platforms//os:windows": "Library/bin/buildifier",
+        "@platforms//os:windows": "Library/bin/buildifier.exe",
         "//conditions:default": "bin/buildifier",
     }),
     visibility = ["//visibility:public"],
@@ -104,7 +104,7 @@ run_binary(
     name = "7.1",
     environment = "@buildifier_7.1",
     path = select({
-        "@platforms//os:windows": "Library/bin/buildifier",
+        "@platforms//os:windows": "Library/bin/buildifier.exe",
         "//conditions:default": "bin/buildifier",
     }),
     visibility = ["//visibility:public"],
@@ -115,7 +115,7 @@ run_binary(
     name = "7.3",
     environment = "@buildifier_7.3",
     path = select({
-        "@platforms//os:windows": "Library/bin/buildifier",
+        "@platforms//os:windows": "Library/bin/buildifier.exe",
         "//conditions:default": "bin/buildifier",
     }),
     visibility = ["//visibility:public"],
@@ -126,7 +126,7 @@ run_binary(
     name = "8.0",
     environment = "@buildifier_8.0",
     path = select({
-        "@platforms//os:windows": "Library/bin/buildifier",
+        "@platforms//os:windows": "Library/bin/buildifier.exe",
         "//conditions:default": "bin/buildifier",
     }),
     visibility = ["//visibility:public"],
@@ -137,7 +137,7 @@ run_binary(
     name = "8.2",
     environment = "@buildifier_8.2",
     path = select({
-        "@platforms//os:windows": "Library/bin/buildifier",
+        "@platforms//os:windows": "Library/bin/buildifier.exe",
         "//conditions:default": "bin/buildifier",
     }),
     visibility = ["//visibility:public"],

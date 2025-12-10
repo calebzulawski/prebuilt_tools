@@ -5,7 +5,7 @@ run_binary(
     name = "2.2",
     environment = "@pkgconf_2.2",
     path = select({
-        "@platforms//os:windows": "Library/bin/pkgconf",
+        "@platforms//os:windows": "Library/bin/pkgconf.exe",
         "//conditions:default": "bin/pkgconf",
     }),
     visibility = ["//visibility:public"],
@@ -16,7 +16,7 @@ run_binary(
     name = "2.3",
     environment = "@pkgconf_2.3",
     path = select({
-        "@platforms//os:windows": "Library/bin/pkgconf",
+        "@platforms//os:windows": "Library/bin/pkgconf.exe",
         "//conditions:default": "bin/pkgconf",
     }),
     visibility = ["//visibility:public"],
@@ -27,7 +27,7 @@ run_binary(
     name = "2.4",
     environment = "@pkgconf_2.4",
     path = select({
-        "@platforms//os:windows": "Library/bin/pkgconf",
+        "@platforms//os:windows": "Library/bin/pkgconf.exe",
         "//conditions:default": "bin/pkgconf",
     }),
     visibility = ["//visibility:public"],
@@ -38,7 +38,7 @@ run_binary(
     name = "2.5",
     environment = "@pkgconf_2.5",
     path = select({
-        "@platforms//os:windows": "Library/bin/pkgconf",
+        "@platforms//os:windows": "Library/bin/pkgconf.exe",
         "//conditions:default": "bin/pkgconf",
     }),
     visibility = ["//visibility:public"],

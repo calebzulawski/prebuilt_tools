@@ -5,7 +5,7 @@ run_binary(
     name = "3.14",
     environment = "@cmake_3.14",
     path = select({
-        "@platforms//os:windows": "Library/bin/cmake",
+        "@platforms//os:windows": "Library/bin/cmake.exe",
         "//conditions:default": "bin/cmake",
     }),
     visibility = ["//visibility:public"],
@@ -16,7 +16,7 @@ run_binary(
     name = "3.15",
     environment = "@cmake_3.15",
     path = select({
-        "@platforms//os:windows": "Library/bin/cmake",
+        "@platforms//os:windows": "Library/bin/cmake.exe",
         "//conditions:default": "bin/cmake",
     }),
     visibility = ["//visibility:public"],
@@ -27,7 +27,7 @@ run_binary(
     name = "3.16",
     environment = "@cmake_3.16",
     path = select({
-        "@platforms//os:windows": "Library/bin/cmake",
+        "@platforms//os:windows": "Library/bin/cmake.exe",
         "//conditions:default": "bin/cmake",
     }),
     visibility = ["//visibility:public"],
@@ -38,7 +38,7 @@ run_binary(
     name = "3.17",
     environment = "@cmake_3.17",
     path = select({
-        "@platforms//os:windows": "Library/bin/cmake",
+        "@platforms//os:windows": "Library/bin/cmake.exe",
         "//conditions:default": "bin/cmake",
     }),
     visibility = ["//visibility:public"],
@@ -49,7 +49,7 @@ run_binary(
     name = "3.18",
     environment = "@cmake_3.18",
     path = select({
-        "@platforms//os:windows": "Library/bin/cmake",
+        "@platforms//os:windows": "Library/bin/cmake.exe",
         "//conditions:default": "bin/cmake",
     }),
     visibility = ["//visibility:public"],
@@ -60,7 +60,7 @@ run_binary(
     name = "3.19",
     environment = "@cmake_3.19",
     path = select({
-        "@platforms//os:windows": "Library/bin/cmake",
+        "@platforms//os:windows": "Library/bin/cmake.exe",
         "//conditions:default": "bin/cmake",
     }),
     visibility = ["//visibility:public"],
@@ -71,7 +71,7 @@ run_binary(
     name = "3.20",
     environment = "@cmake_3.20",
     path = select({
-        "@platforms//os:windows": "Library/bin/cmake",
+        "@platforms//os:windows": "Library/bin/cmake.exe",
         "//conditions:default": "bin/cmake",
     }),
     visibility = ["//visibility:public"],
@@ -82,7 +82,7 @@ run_binary(
     name = "3.21",
     environment = "@cmake_3.21",
     path = select({
-        "@platforms//os:windows": "Library/bin/cmake",
+        "@platforms//os:windows": "Library/bin/cmake.exe",
         "//conditions:default": "bin/cmake",
     }),
     visibility = ["//visibility:public"],
@@ -93,7 +93,7 @@ run_binary(
     name = "3.22",
     environment = "@cmake_3.22",
     path = select({
-        "@platforms//os:windows": "Library/bin/cmake",
+        "@platforms//os:windows": "Library/bin/cmake.exe",
         "//conditions:default": "bin/cmake",
     }),
     visibility = ["//visibility:public"],
@@ -104,7 +104,7 @@ run_binary(
     name = "3.23",
     environment = "@cmake_3.23",
     path = select({
-        "@platforms//os:windows": "Library/bin/cmake",
+        "@platforms//os:windows": "Library/bin/cmake.exe",
         "//conditions:default": "bin/cmake",
     }),
     visibility = ["//visibility:public"],
@@ -115,7 +115,7 @@ run_binary(
     name = "3.24",
     environment = "@cmake_3.24",
     path = select({
-        "@platforms//os:windows": "Library/bin/cmake",
+        "@platforms//os:windows": "Library/bin/cmake.exe",
         "//conditions:default": "bin/cmake",
     }),
     visibility = ["//visibility:public"],
@@ -126,7 +126,7 @@ run_binary(
     name = "3.25",
     environment = "@cmake_3.25",
     path = select({
-        "@platforms//os:windows": "Library/bin/cmake",
+        "@platforms//os:windows": "Library/bin/cmake.exe",
         "//conditions:default": "bin/cmake",
     }),
     visibility = ["//visibility:public"],
@@ -137,7 +137,7 @@ run_binary(
     name = "3.26",
     environment = "@cmake_3.26",
     path = select({
-        "@platforms//os:windows": "Library/bin/cmake",
+        "@platforms//os:windows": "Library/bin/cmake.exe",
         "//conditions:default": "bin/cmake",
     }),
     visibility = ["//visibility:public"],
@@ -148,7 +148,7 @@ run_binary(
     name = "3.27",
     environment = "@cmake_3.27",
     path = select({
-        "@platforms//os:windows": "Library/bin/cmake",
+        "@platforms//os:windows": "Library/bin/cmake.exe",
         "//conditions:default": "bin/cmake",
     }),
     visibility = ["//visibility:public"],
@@ -159,7 +159,7 @@ run_binary(
     name = "3.28",
     environment = "@cmake_3.28",
     path = select({
-        "@platforms//os:windows": "Library/bin/cmake",
+        "@platforms//os:windows": "Library/bin/cmake.exe",
         "//conditions:default": "bin/cmake",
     }),
     visibility = ["//visibility:public"],
@@ -170,7 +170,7 @@ run_binary(
     name = "3.29",
     environment = "@cmake_3.29",
     path = select({
-        "@platforms//os:windows": "Library/bin/cmake",
+        "@platforms//os:windows": "Library/bin/cmake.exe",
         "//conditions:default": "bin/cmake",
     }),
     visibility = ["//visibility:public"],
@@ -181,7 +181,7 @@ run_binary(
     name = "3.30",
     environment = "@cmake_3.30",
     path = select({
-        "@platforms//os:windows": "Library/bin/cmake",
+        "@platforms//os:windows": "Library/bin/cmake.exe",
         "//conditions:default": "bin/cmake",
     }),
     visibility = ["//visibility:public"],
@@ -192,7 +192,7 @@ run_binary(
     name = "3.31",
     environment = "@cmake_3.31",
     path = select({
-        "@platforms//os:windows": "Library/bin/cmake",
+        "@platforms//os:windows": "Library/bin/cmake.exe",
         "//conditions:default": "bin/cmake",
     }),
     visibility = ["//visibility:public"],
@@ -203,7 +203,7 @@ run_binary(
     name = "4.0",
     environment = "@cmake_4.0",
     path = select({
-        "@platforms//os:windows": "Library/bin/cmake",
+        "@platforms//os:windows": "Library/bin/cmake.exe",
         "//conditions:default": "bin/cmake",
     }),
     visibility = ["//visibility:public"],
@@ -214,7 +214,7 @@ run_binary(
     name = "4.1",
     environment = "@cmake_4.1",
     path = select({
-        "@platforms//os:windows": "Library/bin/cmake",
+        "@platforms//os:windows": "Library/bin/cmake.exe",
         "//conditions:default": "bin/cmake",
     }),
     visibility = ["//visibility:public"],
@@ -225,7 +225,7 @@ run_binary(
     name = "4.2",
     environment = "@cmake_4.2",
     path = select({
-        "@platforms//os:windows": "Library/bin/cmake",
+        "@platforms//os:windows": "Library/bin/cmake.exe",
         "//conditions:default": "bin/cmake",
     }),
     visibility = ["//visibility:public"],

@@ -5,7 +5,7 @@ run_binary(
     name = "3.9",
     environment = "@grep_3.9",
     path = select({
-        "@platforms//os:windows": "Library/bin/grep",
+        "@platforms//os:windows": "Library/bin/grep.exe",
         "//conditions:default": "bin/grep",
     }),
     visibility = ["//visibility:public"],
@@ -16,7 +16,7 @@ run_binary(
     name = "3.10",
     environment = "@grep_3.10",
     path = select({
-        "@platforms//os:windows": "Library/bin/grep",
+        "@platforms//os:windows": "Library/bin/grep.exe",
         "//conditions:default": "bin/grep",
     }),
     visibility = ["//visibility:public"],
@@ -27,7 +27,7 @@ run_binary(
     name = "3.11",
     environment = "@grep_3.11",
     path = select({
-        "@platforms//os:windows": "Library/bin/grep",
+        "@platforms//os:windows": "Library/bin/grep.exe",
         "//conditions:default": "bin/grep",
     }),
     visibility = ["//visibility:public"],
@@ -38,7 +38,7 @@ run_binary(
     name = "3.12",
     environment = "@grep_3.12",
     path = select({
-        "@platforms//os:windows": "Library/bin/grep",
+        "@platforms//os:windows": "Library/bin/grep.exe",
         "//conditions:default": "bin/grep",
     }),
     visibility = ["//visibility:public"],

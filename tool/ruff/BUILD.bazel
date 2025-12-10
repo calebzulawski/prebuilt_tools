@@ -5,7 +5,7 @@ run_binary(
     name = "0.0",
     environment = "@ruff_0.0",
     path = select({
-        "@platforms//os:windows": "Library/bin/ruff",
+        "@platforms//os:windows": "Library/bin/ruff.exe",
         "//conditions:default": "bin/ruff",
     }),
     visibility = ["//visibility:public"],
@@ -16,7 +16,7 @@ run_binary(
     name = "0.1",
     environment = "@ruff_0.1",
     path = select({
-        "@platforms//os:windows": "Library/bin/ruff",
+        "@platforms//os:windows": "Library/bin/ruff.exe",
         "//conditions:default": "bin/ruff",
     }),
     visibility = ["//visibility:public"],
@@ -27,7 +27,7 @@ run_binary(
     name = "0.2",
     environment = "@ruff_0.2",
     path = select({
-        "@platforms//os:windows": "Library/bin/ruff",
+        "@platforms//os:windows": "Library/bin/ruff.exe",
         "//conditions:default": "bin/ruff",
     }),
     visibility = ["//visibility:public"],
@@ -38,7 +38,7 @@ run_binary(
     name = "0.3",
     environment = "@ruff_0.3",
     path = select({
-        "@platforms//os:windows": "Library/bin/ruff",
+        "@platforms//os:windows": "Library/bin/ruff.exe",
         "//conditions:default": "bin/ruff",
     }),
     visibility = ["//visibility:public"],
@@ -49,7 +49,7 @@ run_binary(
     name = "0.4",
     environment = "@ruff_0.4",
     path = select({
-        "@platforms//os:windows": "Library/bin/ruff",
+        "@platforms//os:windows": "Library/bin/ruff.exe",
         "//conditions:default": "bin/ruff",
     }),
     visibility = ["//visibility:public"],
@@ -60,7 +60,7 @@ run_binary(
     name = "0.5",
     environment = "@ruff_0.5",
     path = select({
-        "@platforms//os:windows": "Library/bin/ruff",
+        "@platforms//os:windows": "Library/bin/ruff.exe",
         "//conditions:default": "bin/ruff",
     }),
     visibility = ["//visibility:public"],
@@ -71,7 +71,7 @@ run_binary(
     name = "0.6",
     environment = "@ruff_0.6",
     path = select({
-        "@platforms//os:windows": "Library/bin/ruff",
+        "@platforms//os:windows": "Library/bin/ruff.exe",
         "//conditions:default": "bin/ruff",
     }),
     visibility = ["//visibility:public"],
@@ -82,7 +82,7 @@ run_binary(
     name = "0.7",
     environment = "@ruff_0.7",
     path = select({
-        "@platforms//os:windows": "Library/bin/ruff",
+        "@platforms//os:windows": "Library/bin/ruff.exe",
         "//conditions:default": "bin/ruff",
     }),
     visibility = ["//visibility:public"],
@@ -93,7 +93,7 @@ run_binary(
     name = "0.8",
     environment = "@ruff_0.8",
     path = select({
-        "@platforms//os:windows": "Library/bin/ruff",
+        "@platforms//os:windows": "Library/bin/ruff.exe",
         "//conditions:default": "bin/ruff",
     }),
     visibility = ["//visibility:public"],
@@ -104,7 +104,7 @@ run_binary(
     name = "0.9",
     environment = "@ruff_0.9",
     path = select({
-        "@platforms//os:windows": "Library/bin/ruff",
+        "@platforms//os:windows": "Library/bin/ruff.exe",
         "//conditions:default": "bin/ruff",
     }),
     visibility = ["//visibility:public"],
@@ -115,7 +115,7 @@ run_binary(
     name = "0.10",
     environment = "@ruff_0.10",
     path = select({
-        "@platforms//os:windows": "Library/bin/ruff",
+        "@platforms//os:windows": "Library/bin/ruff.exe",
         "//conditions:default": "bin/ruff",
     }),
     visibility = ["//visibility:public"],
@@ -126,7 +126,7 @@ run_binary(
     name = "0.11",
     environment = "@ruff_0.11",
     path = select({
-        "@platforms//os:windows": "Library/bin/ruff",
+        "@platforms//os:windows": "Library/bin/ruff.exe",
         "//conditions:default": "bin/ruff",
     }),
     visibility = ["//visibility:public"],
@@ -137,7 +137,7 @@ run_binary(
     name = "0.12",
     environment = "@ruff_0.12",
     path = select({
-        "@platforms//os:windows": "Library/bin/ruff",
+        "@platforms//os:windows": "Library/bin/ruff.exe",
         "//conditions:default": "bin/ruff",
     }),
     visibility = ["//visibility:public"],
@@ -148,7 +148,7 @@ run_binary(
     name = "0.13",
     environment = "@ruff_0.13",
     path = select({
-        "@platforms//os:windows": "Library/bin/ruff",
+        "@platforms//os:windows": "Library/bin/ruff.exe",
         "//conditions:default": "bin/ruff",
     }),
     visibility = ["//visibility:public"],
@@ -159,7 +159,7 @@ run_binary(
     name = "0.14",
     environment = "@ruff_0.14",
     path = select({
-        "@platforms//os:windows": "Library/bin/ruff",
+        "@platforms//os:windows": "Library/bin/ruff.exe",
         "//conditions:default": "bin/ruff",
     }),
     visibility = ["//visibility:public"],

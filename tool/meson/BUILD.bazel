@@ -5,7 +5,7 @@ run_binary(
     name = "0.45",
     environment = "@meson_0.45",
     path = select({
-        "@platforms//os:windows": "Library/bin/meson",
+        "@platforms//os:windows": "Library/bin/meson.exe",
         "//conditions:default": "bin/meson",
     }),
     visibility = ["//visibility:public"],
@@ -16,7 +16,7 @@ run_binary(
     name = "0.46",
     environment = "@meson_0.46",
     path = select({
-        "@platforms//os:windows": "Library/bin/meson",
+        "@platforms//os:windows": "Library/bin/meson.exe",
         "//conditions:default": "bin/meson",
     }),
     visibility = ["//visibility:public"],
@@ -27,7 +27,7 @@ run_binary(
     name = "0.47",
     environment = "@meson_0.47",
     path = select({
-        "@platforms//os:windows": "Library/bin/meson",
+        "@platforms//os:windows": "Library/bin/meson.exe",
         "//conditions:default": "bin/meson",
     }),
     visibility = ["//visibility:public"],
@@ -38,7 +38,7 @@ run_binary(
     name = "0.48",
     environment = "@meson_0.48",
     path = select({
-        "@platforms//os:windows": "Library/bin/meson",
+        "@platforms//os:windows": "Library/bin/meson.exe",
         "//conditions:default": "bin/meson",
     }),
     visibility = ["//visibility:public"],
@@ -49,7 +49,7 @@ run_binary(
     name = "0.49",
     environment = "@meson_0.49",
     path = select({
-        "@platforms//os:windows": "Library/bin/meson",
+        "@platforms//os:windows": "Library/bin/meson.exe",
         "//conditions:default": "bin/meson",
     }),
     visibility = ["//visibility:public"],
@@ -60,7 +60,7 @@ run_binary(
     name = "0.50",
     environment = "@meson_0.50",
     path = select({
-        "@platforms//os:windows": "Library/bin/meson",
+        "@platforms//os:windows": "Library/bin/meson.exe",
         "//conditions:default": "bin/meson",
     }),
     visibility = ["//visibility:public"],
@@ -71,7 +71,7 @@ run_binary(
     name = "0.51",
     environment = "@meson_0.51",
     path = select({
-        "@platforms//os:windows": "Library/bin/meson",
+        "@platforms//os:windows": "Library/bin/meson.exe",
         "//conditions:default": "bin/meson",
     }),
     visibility = ["//visibility:public"],
@@ -82,7 +82,7 @@ run_binary(
     name = "0.52",
     environment = "@meson_0.52",
     path = select({
-        "@platforms//os:windows": "Library/bin/meson",
+        "@platforms//os:windows": "Library/bin/meson.exe",
         "//conditions:default": "bin/meson",
     }),
     visibility = ["//visibility:public"],
@@ -93,7 +93,7 @@ run_binary(
     name = "0.53",
     environment = "@meson_0.53",
     path = select({
-        "@platforms//os:windows": "Library/bin/meson",
+        "@platforms//os:windows": "Library/bin/meson.exe",
         "//conditions:default": "bin/meson",
     }),
     visibility = ["//visibility:public"],
@@ -104,7 +104,7 @@ run_binary(
     name = "0.54",
     environment = "@meson_0.54",
     path = select({
-        "@platforms//os:windows": "Library/bin/meson",
+        "@platforms//os:windows": "Library/bin/meson.exe",
         "//conditions:default": "bin/meson",
     }),
     visibility = ["//visibility:public"],
@@ -115,7 +115,7 @@ run_binary(
     name = "0.55",
     environment = "@meson_0.55",
     path = select({
-        "@platforms//os:windows": "Library/bin/meson",
+        "@platforms//os:windows": "Library/bin/meson.exe",
         "//conditions:default": "bin/meson",
     }),
     visibility = ["//visibility:public"],
@@ -126,7 +126,7 @@ run_binary(
     name = "0.56",
     environment = "@meson_0.56",
     path = select({
-        "@platforms//os:windows": "Library/bin/meson",
+        "@platforms//os:windows": "Library/bin/meson.exe",
         "//conditions:default": "bin/meson",
     }),
     visibility = ["//visibility:public"],
@@ -137,7 +137,7 @@ run_binary(
     name = "0.57",
     environment = "@meson_0.57",
     path = select({
-        "@platforms//os:windows": "Library/bin/meson",
+        "@platforms//os:windows": "Library/bin/meson.exe",
         "//conditions:default": "bin/meson",
     }),
     visibility = ["//visibility:public"],
@@ -148,7 +148,7 @@ run_binary(
     name = "0.58",
     environment = "@meson_0.58",
     path = select({
-        "@platforms//os:windows": "Library/bin/meson",
+        "@platforms//os:windows": "Library/bin/meson.exe",
         "//conditions:default": "bin/meson",
     }),
     visibility = ["//visibility:public"],
@@ -159,7 +159,7 @@ run_binary(
     name = "0.59",
     environment = "@meson_0.59",
     path = select({
-        "@platforms//os:windows": "Library/bin/meson",
+        "@platforms//os:windows": "Library/bin/meson.exe",
         "//conditions:default": "bin/meson",
     }),
     visibility = ["//visibility:public"],
@@ -170,7 +170,7 @@ run_binary(
     name = "0.60",
     environment = "@meson_0.60",
     path = select({
-        "@platforms//os:windows": "Library/bin/meson",
+        "@platforms//os:windows": "Library/bin/meson.exe",
         "//conditions:default": "bin/meson",
     }),
     visibility = ["//visibility:public"],
@@ -181,7 +181,7 @@ run_binary(
     name = "0.61",
     environment = "@meson_0.61",
     path = select({
-        "@platforms//os:windows": "Library/bin/meson",
+        "@platforms//os:windows": "Library/bin/meson.exe",
         "//conditions:default": "bin/meson",
     }),
     visibility = ["//visibility:public"],
@@ -192,7 +192,7 @@ run_binary(
     name = "0.62",
     environment = "@meson_0.62",
     path = select({
-        "@platforms//os:windows": "Library/bin/meson",
+        "@platforms//os:windows": "Library/bin/meson.exe",
         "//conditions:default": "bin/meson",
     }),
     visibility = ["//visibility:public"],
@@ -203,7 +203,7 @@ run_binary(
     name = "0.63",
     environment = "@meson_0.63",
     path = select({
-        "@platforms//os:windows": "Library/bin/meson",
+        "@platforms//os:windows": "Library/bin/meson.exe",
         "//conditions:default": "bin/meson",
     }),
     visibility = ["//visibility:public"],
@@ -214,7 +214,7 @@ run_binary(
     name = "0.64",
     environment = "@meson_0.64",
     path = select({
-        "@platforms//os:windows": "Library/bin/meson",
+        "@platforms//os:windows": "Library/bin/meson.exe",
         "//conditions:default": "bin/meson",
     }),
     visibility = ["//visibility:public"],
@@ -225,7 +225,7 @@ run_binary(
     name = "1.0",
     environment = "@meson_1.0",
     path = select({
-        "@platforms//os:windows": "Library/bin/meson",
+        "@platforms//os:windows": "Library/bin/meson.exe",
         "//conditions:default": "bin/meson",
     }),
     visibility = ["//visibility:public"],
@@ -236,7 +236,7 @@ run_binary(
     name = "1.1",
     environment = "@meson_1.1",
     path = select({
-        "@platforms//os:windows": "Library/bin/meson",
+        "@platforms//os:windows": "Library/bin/meson.exe",
         "//conditions:default": "bin/meson",
     }),
     visibility = ["//visibility:public"],
@@ -247,7 +247,7 @@ run_binary(
     name = "1.2",
     environment = "@meson_1.2",
     path = select({
-        "@platforms//os:windows": "Library/bin/meson",
+        "@platforms//os:windows": "Library/bin/meson.exe",
         "//conditions:default": "bin/meson",
     }),
     visibility = ["//visibility:public"],
@@ -258,7 +258,7 @@ run_binary(
     name = "1.3",
     environment = "@meson_1.3",
     path = select({
-        "@platforms//os:windows": "Library/bin/meson",
+        "@platforms//os:windows": "Library/bin/meson.exe",
         "//conditions:default": "bin/meson",
     }),
     visibility = ["//visibility:public"],
@@ -269,7 +269,7 @@ run_binary(
     name = "1.4",
     environment = "@meson_1.4",
     path = select({
-        "@platforms//os:windows": "Library/bin/meson",
+        "@platforms//os:windows": "Library/bin/meson.exe",
         "//conditions:default": "bin/meson",
     }),
     visibility = ["//visibility:public"],
@@ -280,7 +280,7 @@ run_binary(
     name = "1.5",
     environment = "@meson_1.5",
     path = select({
-        "@platforms//os:windows": "Library/bin/meson",
+        "@platforms//os:windows": "Library/bin/meson.exe",
         "//conditions:default": "bin/meson",
     }),
     visibility = ["//visibility:public"],
@@ -291,7 +291,7 @@ run_binary(
     name = "1.6",
     environment = "@meson_1.6",
     path = select({
-        "@platforms//os:windows": "Library/bin/meson",
+        "@platforms//os:windows": "Library/bin/meson.exe",
         "//conditions:default": "bin/meson",
     }),
     visibility = ["//visibility:public"],
@@ -302,7 +302,7 @@ run_binary(
     name = "1.7",
     environment = "@meson_1.7",
     path = select({
-        "@platforms//os:windows": "Library/bin/meson",
+        "@platforms//os:windows": "Library/bin/meson.exe",
         "//conditions:default": "bin/meson",
     }),
     visibility = ["//visibility:public"],
@@ -313,7 +313,7 @@ run_binary(
     name = "1.8",
     environment = "@meson_1.8",
     path = select({
-        "@platforms//os:windows": "Library/bin/meson",
+        "@platforms//os:windows": "Library/bin/meson.exe",
         "//conditions:default": "bin/meson",
     }),
     visibility = ["//visibility:public"],
@@ -324,7 +324,7 @@ run_binary(
     name = "1.9",
     environment = "@meson_1.9",
     path = select({
-        "@platforms//os:windows": "Library/bin/meson",
+        "@platforms//os:windows": "Library/bin/meson.exe",
         "//conditions:default": "bin/meson",
     }),
     visibility = ["//visibility:public"],
@@ -335,7 +335,7 @@ run_binary(
     name = "1.10",
     environment = "@meson_1.10",
     path = select({
-        "@platforms//os:windows": "Library/bin/meson",
+        "@platforms//os:windows": "Library/bin/meson.exe",
         "//conditions:default": "bin/meson",
     }),
     visibility = ["//visibility:public"],

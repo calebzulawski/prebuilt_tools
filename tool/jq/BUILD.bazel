@@ -5,7 +5,7 @@ run_binary(
     name = "1.5",
     environment = "@jq_1.5",
     path = select({
-        "@platforms//os:windows": "Library/bin/jq",
+        "@platforms//os:windows": "Library/bin/jq.exe",
         "//conditions:default": "bin/jq",
     }),
     visibility = ["//visibility:public"],
@@ -16,7 +16,7 @@ run_binary(
     name = "1.6",
     environment = "@jq_1.6",
     path = select({
-        "@platforms//os:windows": "Library/bin/jq",
+        "@platforms//os:windows": "Library/bin/jq.exe",
         "//conditions:default": "bin/jq",
     }),
     visibility = ["//visibility:public"],
@@ -27,7 +27,7 @@ run_binary(
     name = "1.7",
     environment = "@jq_1.7",
     path = select({
-        "@platforms//os:windows": "Library/bin/jq",
+        "@platforms//os:windows": "Library/bin/jq.exe",
         "//conditions:default": "bin/jq",
     }),
     visibility = ["//visibility:public"],
@@ -38,7 +38,7 @@ run_binary(
     name = "1.8",
     environment = "@jq_1.8",
     path = select({
-        "@platforms//os:windows": "Library/bin/jq",
+        "@platforms//os:windows": "Library/bin/jq.exe",
         "//conditions:default": "bin/jq",
     }),
     visibility = ["//visibility:public"],
