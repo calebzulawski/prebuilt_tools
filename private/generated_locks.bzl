@@ -136,6 +136,7 @@ _PACKAGE_SPECS = {
             "specs/meson/meson_0.64.yml",
             "specs/meson/meson_1.0.yml",
             "specs/meson/meson_1.1.yml",
+            "specs/meson/meson_1.10.yml",
             "specs/meson/meson_1.2.yml",
             "specs/meson/meson_1.3.yml",
             "specs/meson/meson_1.4.yml",

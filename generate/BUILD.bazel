@@ -4,7 +4,10 @@ load("@prebuilt_tools_pip//:requirements.bzl", "requirement")
 py_binary(
     name = "generate",
     srcs = ["generate.py"],
-    data = ["config.json"],
+    data = [
+        "config.json",
+        "MODULE.bazel.tmpl",
+    ],
     deps = [
         requirement("py-rattler"),
     ],

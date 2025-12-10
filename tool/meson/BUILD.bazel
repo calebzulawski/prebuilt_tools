@@ -331,9 +331,20 @@ run_binary(
 )
 
 
+run_binary(
+    name = "1.10",
+    environment = "@meson_1.10",
+    path = select({
+        "@platforms//os:windows": "Library/bin/meson",
+        "//conditions:default": "bin/meson",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+
 alias(
     name = "meson",
-    actual = ":1.9",
+    actual = ":1.10",
     visibility = ["//visibility:public"],
 )
 
@@ -341,8 +352,8 @@ alias(
 sh_test(
     name = "help_test",
     srcs = ["//:run_tool_help_test.sh"],
-    args = ["$(location :1.9)"],
-    data = [":1.9"],
+    args = ["$(location :1.10)"],
+    data = [":1.10"],
     target_compatible_with =
     select({
             "//:platform_linux_64": [],

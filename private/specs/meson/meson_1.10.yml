@@ -1,0 +1,12 @@
+name: meson_1.10
+channels:
+  - conda-forge
+dependencies:
+  - meson>=1.10,<1.11
+platforms:
+  - linux-64
+  - linux-aarch64
+  - linux-ppc64le
+  - osx-64
+  - osx-arm64
+  - win-64

@@ -36,3 +36,4 @@
 | 1.7 | linux-64, linux-aarch64, linux-ppc64le, osx-64, osx-arm64, win-64 |
 | 1.8 | linux-64, linux-aarch64, linux-ppc64le, osx-64, osx-arm64, win-64 |
 | 1.9 | linux-64, linux-aarch64, linux-ppc64le, osx-64, osx-arm64, win-64 |
+| 1.10 | linux-64, linux-aarch64, linux-ppc64le, osx-64, osx-arm64, win-64 |
