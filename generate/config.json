@@ -18,7 +18,13 @@
   },
   {
     "package": "pkg-config",
-    "executables": ["pkg-config.bin"]
+    "executables": ["pkg-config"],
+    "executable_overrides": {
+      "pkg-config": {
+        "@platforms//os:windows": "pkg-config.exe",
+        "//conditions:default": "pkg-config.bin"
+      }
+    }
   },
   {
     "package": "pkgconf",

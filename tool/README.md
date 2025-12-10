@@ -19,7 +19,7 @@ Each subdirectory exposes Bazel targets for a specific tool. Select a tool below
 - [meson](./meson/README.md)
 - [ninja](./ninja/README.md)
 - [pandoc](./pandoc/README.md)
-- [pkg-config.bin](./pkg-config.bin/README.md)
+- [pkg-config](./pkg-config/README.md)
 - [pkgconf](./pkgconf/README.md)
 - [readelf](./readelf/README.md)
 - [ruff](./ruff/README.md)

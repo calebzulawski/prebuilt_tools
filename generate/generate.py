@@ -15,7 +15,7 @@ import shutil
 import sys
 import textwrap
 from collections import defaultdict
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Dict, Iterable, List, Sequence, Set, Tuple
 
@@ -44,14 +44,13 @@ DEFAULT_SUBDIRS = tuple(
     str(platform) for platform in Platform.all() if str(platform) not in SKIP_PLATFORMS
 )
 MINOR_VERSION_PATTERN = re.compile(r"^(?P<major>\d+)\.(?P<minor>\d+)")
-
-
 @dataclass(frozen=True)
 class PackageSpec:
     package: str
     executables: Tuple[str, ...]
     win_package: str | None = None
     min_minor_version: Tuple[int, int] | None = None
+    executable_overrides: Dict[str, Dict[str, str]] = field(default_factory=dict)
 
 
 def _normalize_executables(raw: Iterable[str] | str | None, fallback: str) -> Tuple[str, ...]:
@@ -106,12 +105,34 @@ def read_mapping(path: Path) -> List[PackageSpec]:
             if not isinstance(min_minor_version, str):
                 raise ValueError("'min_minor_version' must be a string like '3.14'")
             min_minor_version = parse_minor_version(min_minor_version)
+        executable_overrides_raw = entry.get("executable_overrides", {})
+        executable_overrides: Dict[str, Dict[str, str]] = {}
+        if executable_overrides_raw:
+            if not isinstance(executable_overrides_raw, dict):
+                raise ValueError("'executable_overrides' must be a dictionary")
+            for exe_name, platform_map in executable_overrides_raw.items():
+                if exe_name not in executables:
+                    raise ValueError(f"Override provided for unknown executable '{exe_name}'")
+                if not isinstance(platform_map, dict):
+                    raise ValueError(f"Platform overrides for '{exe_name}' must be a dictionary")
+                normalized_map: Dict[str, str] = {}
+                for platform_label, override_name in platform_map.items():
+                    if not isinstance(platform_label, str) or not isinstance(override_name, str):
+                        raise ValueError("Platform override mapping must use string keys and values")
+                    platform_label = platform_label.strip()
+                    override_name = override_name.strip()
+                    if not platform_label or not override_name:
+                        raise ValueError("Platform override entries must be non-empty")
+                    normalized_map[platform_label] = override_name
+                if normalized_map:
+                    executable_overrides[exe_name] = normalized_map
         specs.append(
             PackageSpec(
                 package=package_name,
                 executables=executables,
                 win_package=win_package,
                 min_minor_version=min_minor_version,
+                executable_overrides=executable_overrides,
             )
         )
     return specs
@@ -378,6 +399,7 @@ def write_tools_build_files(
     repo_root: Path,
     tool_versions: Dict[str, Dict[str, str]],
     environment_platforms: Dict[str, Set[str]],
+    tool_executable_overrides: Dict[str, Dict[str, str]],
 ) -> None:
     tool_root = repo_root / "tool"
     if tool_root.exists():
@@ -400,6 +422,21 @@ def write_tools_build_files(
                 if tool_name.endswith(".exe")
                 else f"{tool_name}.exe"
             )
+            overrides = tool_executable_overrides.get(tool_name, {})
+            select_entries = dict(overrides)
+            select_entries.setdefault("@platforms//os:windows", windows_binary)
+            select_entries.setdefault("//conditions:default", tool_name)
+            order = []
+            if "@platforms//os:windows" in select_entries:
+                order.append("@platforms//os:windows")
+            other_labels = [label for label in select_entries if label not in ("@platforms//os:windows", "//conditions:default")]
+            order.extend(sorted(other_labels))
+            if "//conditions:default" in select_entries:
+                order.append("//conditions:default")
+            select_body = "\n".join(
+                f'                            "{label}": "{select_entries[label]}",'
+                for label in order
+            )
             lines.append(
                 textwrap.dedent(
                     f"""\
@@ -407,8 +444,7 @@ def write_tools_build_files(
                         name = "{minor_version}",
                         environment = "@{environment_name}",
                         executable = select({{
-                            "@platforms//os:windows": "{windows_binary}",
-                            "//conditions:default": "{tool_name}",
+{select_body}
                         }}),
                         visibility = ["//visibility:public"],
                     )
@@ -529,6 +565,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     generated_files: Dict[str, List[Path]] = defaultdict(list)
     environment_packages: Dict[str, str] = {}
     tool_versions: Dict[str, Dict[str, str]] = defaultdict(dict)
+    tool_executable_overrides: Dict[str, Dict[str, str]] = defaultdict(dict)
     environment_platforms: Dict[str, Set[str]] = defaultdict(set)
     for spec in package_specs:
         base_availability = availability_by_package.get(spec.package, {})
@@ -590,6 +627,9 @@ def main(argv: Sequence[str] | None = None) -> int:
             environment_platforms[env_name].update(platforms)
             for tool in spec.executables:
                 tool_versions[tool][minor_version] = env_name
+                overrides = spec.executable_overrides.get(tool)
+                if overrides:
+                    tool_executable_overrides[tool].update(overrides)
 
         if spec.win_package:
             for minor_version, platforms in win_availability.items():
@@ -609,6 +649,9 @@ def main(argv: Sequence[str] | None = None) -> int:
                 environment_platforms[base_env_name].update(["win-64"])
                 for tool in spec.executables:
                     tool_versions[tool][minor_version] = base_env_name
+                    overrides = spec.executable_overrides.get(tool)
+                    if overrides:
+                        tool_executable_overrides[tool].update(overrides)
 
     for package, files in generated_files.items():
         print(f"{package}:")
@@ -617,7 +660,7 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     write_lock_definitions(repo_root, generated_files)
     write_module_file(repo_root, environment_packages)
-    write_tools_build_files(repo_root, tool_versions, environment_platforms)
+    write_tools_build_files(repo_root, tool_versions, environment_platforms, tool_executable_overrides)
     write_readmes(repo_root, tool_versions, environment_platforms)
 
     return 0
