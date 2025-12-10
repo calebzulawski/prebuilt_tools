@@ -4,9 +4,9 @@ load("@rules_shell//shell:sh_test.bzl", "sh_test")
 run_binary(
     name = "1.4",
     environment = "@m4_1.4",
-    path = select({
-        "@platforms//os:windows": "Library/bin/m4.exe",
-        "//conditions:default": "bin/m4",
+    executable = select({
+        "@platforms//os:windows": "m4.exe",
+        "//conditions:default": "m4",
     }),
     visibility = ["//visibility:public"],
 )

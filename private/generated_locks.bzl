@@ -274,4 +274,3 @@ ensure_lockfiles = rule(
     attrs = {"lockfiles": attr.string_list()},
     executable = True,
 )
-

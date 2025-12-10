@@ -1,12 +1,13 @@
-load("@rules_python//python:defs.bzl", "py_binary")
 load("@prebuilt_tools_pip//:requirements.bzl", "requirement")
+load("@rules_python//python:defs.bzl", "py_binary")
 
 py_binary(
     name = "generate",
     srcs = ["generate.py"],
     data = [
-        "config.json",
         "MODULE.bazel.tmpl",
+        "config.json",
+        "locks.bzl.tmpl",
     ],
     deps = [
         requirement("py-rattler"),

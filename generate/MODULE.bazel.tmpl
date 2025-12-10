@@ -6,7 +6,7 @@ module(
 )
 
 bazel_dep(name = "platforms", version = "1.0.0")
-bazel_dep(name = "rules_conda", version = "0.1.2")
+bazel_dep(name = "rules_conda", version = "0.1.3")
 bazel_dep(name = "rules_multirun", version = "0.13.0")
 bazel_dep(name = "rules_shell", version = "0.6.1")
 
@@ -24,4 +24,25 @@ pip.parse(
 )
 use_repo(pip, "prebuilt_tools_pip")
 
+environments = {
 {{GENERATED_ENVIRONMENTS}}
+}
+
+conda = use_extension(
+    "@rules_conda//conda:extensions.bzl",
+    "conda",
+)
+
+[
+    conda.environment(
+        name = environment_name,
+        lockfile = lockfile,
+        deduplicate_downloads = False,
+    )
+    for environment_name, lockfile in environments.items()
+]
+
+[
+    use_repo(conda, environment_name)
+    for environment_name in environments
+]

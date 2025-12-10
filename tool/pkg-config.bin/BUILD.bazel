@@ -4,9 +4,9 @@ load("@rules_shell//shell:sh_test.bzl", "sh_test")
 run_binary(
     name = "0.28",
     environment = "@pkg_config_0.28",
-    path = select({
-        "@platforms//os:windows": "Library/bin/pkg-config.bin.exe",
-        "//conditions:default": "bin/pkg-config.bin",
+    executable = select({
+        "@platforms//os:windows": "pkg-config.bin.exe",
+        "//conditions:default": "pkg-config.bin",
     }),
     visibility = ["//visibility:public"],
 )
@@ -15,9 +15,9 @@ run_binary(
 run_binary(
     name = "0.29",
     environment = "@pkg_config_0.29",
-    path = select({
-        "@platforms//os:windows": "Library/bin/pkg-config.bin.exe",
-        "//conditions:default": "bin/pkg-config.bin",
+    executable = select({
+        "@platforms//os:windows": "pkg-config.bin.exe",
+        "//conditions:default": "pkg-config.bin",
     }),
     visibility = ["//visibility:public"],
 )
