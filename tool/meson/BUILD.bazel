@@ -350,8 +350,8 @@ alias(
 
 
 sh_test(
-    name = "help_test",
-    srcs = ["//:run_tool_help_test.sh"],
+    name = "meson_smoke_test",
+    srcs = ["//private:tool_smoke_test.sh"],
     args = ["$(location :1.10)"],
     data = [":1.10"],
     target_compatible_with =

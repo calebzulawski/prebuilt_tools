@@ -1,8 +1,5 @@
 package(default_visibility = ["//visibility:public"])
 
-exports_files([
-    "run_tool_help_test.sh",
-])
 
 config_setting(
     name = "platform_linux_64",

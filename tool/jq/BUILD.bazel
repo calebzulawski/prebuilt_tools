@@ -53,8 +53,8 @@ alias(
 
 
 sh_test(
-    name = "help_test",
-    srcs = ["//:run_tool_help_test.sh"],
+    name = "jq_smoke_test",
+    srcs = ["//private:tool_smoke_test.sh"],
     args = ["$(location :1.8)"],
     data = [":1.8"],
     target_compatible_with =

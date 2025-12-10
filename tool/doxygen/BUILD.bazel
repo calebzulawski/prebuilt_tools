@@ -75,8 +75,8 @@ alias(
 
 
 sh_test(
-    name = "help_test",
-    srcs = ["//:run_tool_help_test.sh"],
+    name = "doxygen_smoke_test",
+    srcs = ["//private:tool_smoke_test.sh"],
     args = ["$(location :1.13)"],
     data = [":1.13"],
     target_compatible_with =

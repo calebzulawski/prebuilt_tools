@@ -27,7 +27,7 @@ from rattler.solver.solver import solve as solve_environment
 
 
 DEFAULT_CHANNEL_URL = "https://conda.anaconda.org/conda-forge"
-HELP_TEST_SCRIPT = "//:run_tool_help_test.sh"
+HELP_TEST_SCRIPT = "//private:tool_smoke_test.sh"
 PLATFORM_CONFIG_SETTINGS = {
     "linux-64": "//:platform_linux_64",
     "linux-aarch64": "//:platform_linux_aarch64",
@@ -518,11 +518,12 @@ def write_tools_build_files(
                 )
             )
             compatibility_block = textwrap.indent(compatibility_expr, " " * 4)
+            smoke_name = f"{tool_name}_smoke_test"
             lines.append(
                 "\n".join(
                     [
                         "sh_test(",
-                        '    name = "help_test",',
+                        f'    name = "{smoke_name}",',
                         f'    srcs = ["{HELP_TEST_SCRIPT}"],',
                         f'    args = ["$(location :{latest_version})"],',
                         f'    data = [":{latest_version}"],',

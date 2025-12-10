@@ -53,8 +53,8 @@ alias(
 
 
 sh_test(
-    name = "help_test",
-    srcs = ["//:run_tool_help_test.sh"],
+    name = "pkgconf_smoke_test",
+    srcs = ["//private:tool_smoke_test.sh"],
     args = ["$(location :2.5)"],
     data = [":2.5"],
     target_compatible_with =

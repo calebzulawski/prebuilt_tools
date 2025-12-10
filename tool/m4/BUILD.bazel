@@ -20,8 +20,8 @@ alias(
 
 
 sh_test(
-    name = "help_test",
-    srcs = ["//:run_tool_help_test.sh"],
+    name = "m4_smoke_test",
+    srcs = ["//private:tool_smoke_test.sh"],
     args = ["$(location :1.4)"],
     data = [":1.4"],
     target_compatible_with =

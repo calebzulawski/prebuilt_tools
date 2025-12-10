@@ -196,8 +196,8 @@ alias(
 
 
 sh_test(
-    name = "help_test",
-    srcs = ["//:run_tool_help_test.sh"],
+    name = "readelf_smoke_test",
+    srcs = ["//private:tool_smoke_test.sh"],
     args = ["$(location :2.45)"],
     data = [":2.45"],
     target_compatible_with =

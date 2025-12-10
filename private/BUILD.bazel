@@ -4,3 +4,7 @@ define_conda_locks(
     glibc_version = "2.17",
     macos_version = "11",
 )
+
+exports_files([
+    "tool_smoke_test.sh",
+])
