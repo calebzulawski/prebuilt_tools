@@ -24,7 +24,8 @@
         "@platforms//os:windows": "pkg-config.exe",
         "//conditions:default": "pkg-config.bin"
       }
-    }
+    },
+    "extra_dependencies": ["pcre2"]
   },
   {
     "package": "pkgconf",

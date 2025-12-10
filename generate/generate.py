@@ -51,6 +51,7 @@ class PackageSpec:
     win_package: str | None = None
     min_minor_version: Tuple[int, int] | None = None
     executable_overrides: Dict[str, Dict[str, str]] = field(default_factory=dict)
+    extra_dependencies: Tuple[str, ...] = field(default_factory=tuple)
 
 
 def _normalize_executables(raw: Iterable[str] | str | None, fallback: str) -> Tuple[str, ...]:
@@ -69,6 +70,26 @@ def _normalize_executables(raw: Iterable[str] | str | None, fallback: str) -> Tu
     if not normalized:
         raise ValueError("Each package entry must define at least one executable name")
     return normalized
+
+
+def _normalize_optional_string_list(raw: Iterable[str] | str | None, *, field_name: str) -> Tuple[str, ...]:
+    if raw is None:
+        return ()
+    if isinstance(raw, str):
+        candidates: Iterable[str] = [raw]
+    elif isinstance(raw, Iterable):
+        candidates = raw
+    else:
+        raise ValueError(f"'{field_name}' must be a string or a list of strings")
+
+    normalized: List[str] = []
+    for value in candidates:
+        if not isinstance(value, str):
+            raise ValueError(f"'{field_name}' entries must be strings")
+        value = value.strip()
+        if value:
+            normalized.append(value)
+    return tuple(normalized)
 
 
 def read_mapping(path: Path) -> List[PackageSpec]:
@@ -126,6 +147,7 @@ def read_mapping(path: Path) -> List[PackageSpec]:
                     normalized_map[platform_label] = override_name
                 if normalized_map:
                     executable_overrides[exe_name] = normalized_map
+        extra_dependencies = _normalize_optional_string_list(entry.get("extra_dependencies"), field_name="extra_dependencies")
         specs.append(
             PackageSpec(
                 package=package_name,
@@ -133,6 +155,7 @@ def read_mapping(path: Path) -> List[PackageSpec]:
                 win_package=win_package,
                 min_minor_version=min_minor_version,
                 executable_overrides=executable_overrides,
+                extra_dependencies=extra_dependencies,
             )
         )
     return specs
@@ -277,6 +300,7 @@ def write_env_file(
     *,
     display_name: str | None = None,
     directory_name: str | None = None,
+    extra_dependencies: Sequence[str] | None = None,
 ) -> Path:
     output_dir = output_root / (directory_name or package_name)
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -287,13 +311,17 @@ def write_env_file(
         else "platforms: []"
     )
     indented_platform_block = textwrap.indent(platform_block, "        ")
+    dependencies = [dependency_constraint(package_name, minor_version)]
+    if extra_dependencies:
+        dependencies.extend(extra_dependencies)
+    dependency_lines = "\n".join(f"          - {value}" for value in dependencies)
     contents = textwrap.dedent(
         f"""\
         name: {env_display}
         channels:
           - conda-forge
         dependencies:
-          - {dependency_constraint(package_name, minor_version)}
+{dependency_lines}
 {indented_platform_block}
         """
     )
@@ -621,6 +649,7 @@ def main(argv: Sequence[str] | None = None) -> int:
                 spec.package,
                 minor_version,
                 platforms,
+                extra_dependencies=spec.extra_dependencies,
             )
             generated_files[spec.package].append(env_path)
             environment_packages.setdefault(env_name, spec.package)
@@ -643,6 +672,7 @@ def main(argv: Sequence[str] | None = None) -> int:
                     ["win-64"],
                     display_name=base_env_name,
                     directory_name=spec.package,
+                    extra_dependencies=spec.extra_dependencies,
                 )
                 generated_files[spec.package].append(env_path)
                 environment_packages.setdefault(base_env_name, spec.package)

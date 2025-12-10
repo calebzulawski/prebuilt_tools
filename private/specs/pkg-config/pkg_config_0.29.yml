@@ -3,6 +3,7 @@ channels:
   - conda-forge
 dependencies:
   - pkg-config>=0.29,<0.30
+  - pcre2
 platforms:
   - linux-64
   - linux-aarch64
