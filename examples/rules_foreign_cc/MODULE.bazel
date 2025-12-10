@@ -5,6 +5,7 @@ module(
 
 bazel_dep(name = "platforms", version = "1.0.0")
 bazel_dep(name = "rules_foreign_cc", version = "0.15.1")
+bazel_dep(name = "rules_shell", version = "0.6.1")
 bazel_dep(name = "prebuilt_tools", version = "0.0.0")
 local_path_override(
     module_name = "prebuilt_tools",
