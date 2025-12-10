@@ -1,0 +1,65 @@
+load("@rules_foreign_cc//toolchains/native_tools:native_tools_toolchain.bzl", "native_tool_toolchain")
+
+package(default_visibility = ["//visibility:public"])
+
+native_tool_toolchain(
+    name = "autoconf_impl",
+    path = "$(execpath @prebuilt_tools//tools/autoconf:autoconf)",
+    target = "@prebuilt_tools//tools/autoconf:autoconf",
+)
+
+toolchain(
+    name = "autoconf_toolchain",
+    toolchain = ":autoconf_impl",
+    toolchain_type = "@rules_foreign_cc//toolchains:autoconf_toolchain",
+)
+
+native_tool_toolchain(
+    name = "automake_impl",
+    path = "$(execpath @prebuilt_tools//tools/automake:automake)",
+    target = "@prebuilt_tools//tools/automake:automake",
+)
+
+toolchain(
+    name = "automake_toolchain",
+    toolchain = ":automake_impl",
+    toolchain_type = "@rules_foreign_cc//toolchains:automake_toolchain",
+)
+
+native_tool_toolchain(
+    name = "m4_impl",
+    path = "$(execpath @prebuilt_tools//tools/m4:m4)",
+    target = "@prebuilt_tools//tools/m4:m4",
+)
+
+toolchain(
+    name = "m4_toolchain",
+    toolchain = ":m4_impl",
+    toolchain_type = "@rules_foreign_cc//toolchains:m4_toolchain",
+)
+
+native_tool_toolchain(
+    name = "make_impl",
+    env = {"MAKE": "$(execpath @prebuilt_tools//tools/make:make)"},
+    path = "$(execpath @prebuilt_tools//tools/make:make)",
+    target = "@prebuilt_tools//tools/make:make",
+)
+
+toolchain(
+    name = "make_toolchain",
+    toolchain = ":make_impl",
+    toolchain_type = "@rules_foreign_cc//toolchains:make_toolchain",
+)
+
+native_tool_toolchain(
+    name = "pkgconfig_impl",
+    env = {"PKG_CONFIG": "$(execpath @prebuilt_tools//tools/pkg-config:pkg-config)"},
+    path = "$(execpath @prebuilt_tools//tools/pkg-config:pkg-config)",
+    target = "@prebuilt_tools//tools/pkg-config:pkg-config",
+)
+
+toolchain(
+    name = "pkgconfig_toolchain",
+    toolchain = ":pkgconfig_impl",
+    toolchain_type = "@rules_foreign_cc//toolchains:pkgconfig_toolchain",
+)

@@ -1,0 +1,22 @@
+load("@rules_foreign_cc//foreign_cc:defs.bzl", "configure_make", "runnable_binary")
+
+configure_make(
+    name = "hello",
+    lib_name = "gnu_hello",
+    lib_source = "@gnu_hello//:all",
+    out_binaries = ["hello"],
+    visibility = ["//visibility:public"],
+)
+
+runnable_binary(
+    name = "hello_bin",
+    binary = "hello",
+    foreign_cc_target = ":hello",
+)
+
+sh_test(
+    name = "hello_test",
+    srcs = ["hello_test.sh"],
+    data = [":hello_bin"],
+    args = ["$(location :hello_bin)"],
+)

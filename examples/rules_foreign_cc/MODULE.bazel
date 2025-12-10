@@ -1,0 +1,49 @@
+module(
+    name = "prebuilt_tools_rules_foreign_cc_example",
+    version = "0.0.0",
+)
+
+bazel_dep(name = "platforms", version = "1.0.0")
+bazel_dep(name = "rules_foreign_cc", version = "0.15.1")
+bazel_dep(name = "prebuilt_tools", version = "0.0.0")
+local_path_override(
+    module_name = "prebuilt_tools",
+    path = "../..",
+)
+
+tools = use_extension(
+    "@rules_foreign_cc//foreign_cc:extensions.bzl",
+    "tools",
+)
+use_repo(
+    tools,
+    "rules_foreign_cc_framework_toolchains",
+)
+
+register_toolchains(
+    "@rules_foreign_cc_framework_toolchains//:all",
+    "//toolchains:autoconf_toolchain",
+    "//toolchains:automake_toolchain",
+    "//toolchains:m4_toolchain",
+    "//toolchains:make_toolchain",
+    "//toolchains:pkgconfig_toolchain",
+)
+
+http_archive = use_repo_rule(
+    "@bazel_tools//tools/build_defs/repo:http.bzl",
+    "http_archive",
+)
+
+http_archive(
+    name = "gnu_hello",
+    build_file_content = """
+filegroup(
+    name = "all",
+    srcs = glob(["**"]),
+    visibility = ["//visibility:public"],
+)
+""",
+    sha256 = "cf04af86dc085268c5f4470fbae49b18afbc221b78096aab842d934a76bad0ab",
+    strip_prefix = "hello-2.12",
+    urls = ["https://ftp.gnu.org/gnu/hello/hello-2.12.tar.gz"],
+)
