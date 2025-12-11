@@ -1,11 +1,11 @@
-load("@rules_foreign_cc//toolchains/native_tools:native_tools_toolchain.bzl", "native_tool_toolchain")
+load("@rules_foreign_cc//toolchains/native_tools:native_tools_toolchain.bzl", "native_tools_toolchain")
 
 package(default_visibility = ["//visibility:public"])
 
 native_tool_toolchain(
     name = "autoconf_impl",
-    path = "$(execpath @prebuilt_tools//tools/autoconf:autoconf)",
-    target = "@prebuilt_tools//tools/autoconf:autoconf",
+    path = "$(execpath @prebuilt_tool//tool/autoconf:autoconf)",
+    target = "@prebuilt_tool//tool/autoconf",
 )
 
 toolchain(
@@ -16,8 +16,8 @@ toolchain(
 
 native_tool_toolchain(
     name = "automake_impl",
-    path = "$(execpath @prebuilt_tools//tools/automake:automake)",
-    target = "@prebuilt_tools//tools/automake:automake",
+    path = "$(execpath @prebuilt_tool//tool/automake:automake)",
+    target = "@prebuilt_tool//tool/automake",
 )
 
 toolchain(
@@ -28,8 +28,8 @@ toolchain(
 
 native_tool_toolchain(
     name = "m4_impl",
-    path = "$(execpath @prebuilt_tools//tools/m4:m4)",
-    target = "@prebuilt_tools//tools/m4:m4",
+    path = "$(execpath @prebuilt_tool//tool/m4:m4)",
+    target = "@prebuilt_tool//tool/m4",
 )
 
 toolchain(
@@ -40,9 +40,9 @@ toolchain(
 
 native_tool_toolchain(
     name = "make_impl",
-    env = {"MAKE": "$(execpath @prebuilt_tools//tools/make:make)"},
-    path = "$(execpath @prebuilt_tools//tools/make:make)",
-    target = "@prebuilt_tools//tools/make:make",
+    env = {"MAKE": "$(execpath @prebuilt_tool//tool/make:make)"},
+    path = "$(execpath @prebuilt_tool//tool/make:make)",
+    target = "@prebuilt_tool//tool/make",
 )
 
 toolchain(
@@ -53,9 +53,9 @@ toolchain(
 
 native_tool_toolchain(
     name = "pkgconfig_impl",
-    env = {"PKG_CONFIG": "$(execpath @prebuilt_tools//tools/pkg-config:pkg-config)"},
-    path = "$(execpath @prebuilt_tools//tools/pkg-config:pkg-config)",
-    target = "@prebuilt_tools//tools/pkg-config:pkg-config",
+    env = {"PKG_CONFIG": "$(execpath @prebuilt_tool//tool/pkg-config:pkg-config)"},
+    path = "$(execpath @prebuilt_tool//tool/pkg-config:pkg-config)",
+    target = "@prebuilt_tool//tool/pkg-config",
 )
 
 toolchain(
